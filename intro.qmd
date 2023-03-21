@@ -60,18 +60,33 @@ Sensors, or instruments, aboard satellites and aircraft use the Sun as a source 
 
 <img src="https://www.earthdata.nasa.gov/s3fs-public/styles/large_full_968px_/public/imported/activePassive.png?VersionId=5RwWhgdW7kFSdrcyM1stzRKQ1ku7ITEp&itok=rdAY4oLb" width="700"/><br/>
 
-(Source: NASA.[What is Remote Sensing? \| Earthdata (nasa.gov)](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
+(Source: NASA. [What is Remote Sensing? \| Earthdata (nasa.gov)](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
 
 ### Electromagnetic
 
 Electromagnetic energy, produced by the vibration of charged particles, travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies.<br/>
 
-<img src="https://www.earthdata.nasa.gov/s3fs-public/imported/EMS-Introduction_0.jpeg?VersionId=rSEKLCj0F2zuFCQ6hRTw6zaBBipH.UWY" width="700"><br/>([Source: NASA](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
+<img src="https://www.earthdata.nasa.gov/s3fs-public/imported/EMS-Introduction_0.jpeg?VersionId=rSEKLCj0F2zuFCQ6hRTw6zaBBipH.UWY" width="700"><br/>
+(Source: NASA. [What is Remote Sensing? \| Earthdata (nasa.gov)](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
 
+- EMR Interacting with Earth's surface
+The EMR, on interaction with earth's surface, experiences a number of changes in the magnitude, direction, wavelength, polarization and phase etc.<br/>
+  - Absorption
+  - Transmission
+
+
+- EMR Interacting with Atmospheric
+Before radiation used for remote sensing reaches the Earth's surface it has to travel through some distance of the Earth's atmosphere. Particles and gases in the atmosphere can affect the incoming light and radiation. These effects are caused by the mechanisms of scattering and absorption.<br/>
+  - Scattering
+    - Rayleigh scattering
+    - Mie scattering
+    - Nonselective scattering
+  - Absorption
+    - Ozone
 
 ### Data
 
-- There are four types of resolution that affet the quality and nature of the data a sensor collects: Spatial,Spectral,Temporal and Radiometric.<br/>
+- There are four types of resolution that affet the quality and nature of the data a sensor collects: Spatial, Spectral, Temporal and Radiometric.<br/>
 - The select of data depends on these factors: Size of features, Date range, Revisit requirement, Spectral sensitivity, Cost.
 
 <img src="https://cdn.mindspritesolutions.com/onestopgis/Aerial-Photography/Digital-Imaging/Digital-Image/posts/Sensor-Resolutions-Radiometric-Spatial-Spectral-and-Temporal/Remotely-Sensed-Data.webp"/ width="700"><br/>
@@ -79,12 +94,42 @@ Electromagnetic energy, produced by the vibration of charged particles, travels 
 
 
 ## Application
+Remote sensing technology applied to various fields: Land, vegetation, water bodies and oceans, surface energy and radiation balance, geology, urban, military......In China, the demand for remote sensing applications mainly comes from the government, the following are some examples of application scenarios.<br/>
+
+| Sector                  | Application categories      | Scenarios                              | Descriptions                                                                                    |
+| ----------------------- | --------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Government sector       | National Land Resources     | Survey monitoring and evaluation       | Land Use Macro Monitoring, Land Resources Survey                                                |
+| Government sector       | National Land Resources     | Development and use monitoring         | 24/7 monitoring of land resources                                                               |
+| Government sector       | Emergency management        | Disaster monitoring                    | Disaster monitoring and analysis, disaster big data analysis                                    |
+| Government sector       | Emergency management        | Emergency command and dispatch         | Emergency supplies management and dispatch, disaster site decision support                      |
+| Government sector       | Ecosystem                   | Atmospheric environmental monitoring   | Atmospheric quality monitoring, air pollution prediction and analysis                           |
+| Government sector       | Ecosystem                   | Survey monitoring analysis             | Ecological resources survey and analysis, ecological environment monitoring and assessmen       |
+| Government sector       | Meteorological observations | Meteorological monitoring and analysis | Weather applications, atmospheric environment, natural disasters                                |
+| Government sector       | Marine resources            | Marine Resources Monitoring            | Coastal zone change monitoring, island monitoring                                               |
+| Government sector       | Marine resources            | Marine emergency monitoring            | Typhoon monitoring, marine oil spill monitoring                                                 |
+| Government sector       | Water resource monitoring   | Soil and water conservation operations | Water and soil conservation informatization supervision of production and construction projects |
+| Government sector       | Water resource monitoring   | Water resource Supervision             | Monitoring the safe operation of water works                                                    |
+| Government sector       | Agricultural production     | Regulation of agricultural production  | Dynamic crop growth monitoring, scientific planting decision making                             |
+| Commercial sector       | Transportation              | Self-driving cars                      | High-precision maps for self-driving cars and more                                              |
+| National Defence sector | Defence Security            | Defence Security Analysis              | Military target reconnaissance, battlefield environment context analysis                        |
 
 
+(Source: Blue Book on China's Space Science and Technology Activities (2020))
 
-
-
-
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/RSINCHINA.png?raw=true"/ width="700"><br/>
+(The need for remote sensing applications in the era of big data in China. Source: Blue Book on China's Space Science and Technology Activities (2020))
 
 
 ## Reflection
+
+This week's teaching was interesting and fundamental, showing us the potential and applications of remote sensing technology. In China, as the spatial planning reform of the country progresses, planning authorities are placing increasing emphasis on remote sensing and 3D GIS technology.<br/>
+
+For many years there has been a contradiction between land use planning and urban planning in China. With increased urbanisation, in particular, the conflict between arable land and urban built-up areas. In recent years, Chinese officials have undertaken a reform of the planning system, combining the two into one, called territorial spatial planning. Remote sensing has changed the way of territorial spatial planning, and its powerful data acquisition, analysis, prediction and management capabilities provide data, methods and management platforms to support territorial spatial planning.Remote sensing helps to achieve a refined and intelligent management of the whole cycle of territorial spatial planning.<br/>
+
+Planning policies have been integrated to form a "one map" for territorial spatial planning based on one map, which can be opened up in layers.<br/>
+
+<img src="https://pic2.zhimg.com/80/v2-2a0b8b2936d79ed76957a688e87c7fa1_1440w.webp"/ width="700">
+(Source:[Territorial spatial planning topic: Overview of the territorial spatial planning system](https://zhuanlan.zhihu.com/p/464396400))
+
+
+
