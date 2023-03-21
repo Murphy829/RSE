@@ -17,4 +17,4 @@ This week we learnt about [Xaringan](https://github.com/yihui/xaringan) and [Qua
 One of this week's tasks was to create a slide presentation on remote sensing sensors using Xaringan.
 
 ## Reflection
-Quarto is seen as the next generation of R markdown, based on other powerful features and has been growing in popularity since its release last year. quarto's beautiful blog and website examples are impressive. However, as an Obsidian user, I am deeply involved in Obsidian's rich and easy-to-use plugins and learning about Xaringan and Quarto has been an interesting experience for me!
+Quarto is seen as the next generation of R markdown, based on powerful features and has been growing in popularity since its release last year. Quarto's beautiful blog and website examples are impressive. However, as an Obsidian user, I am deeply involved in Obsidian's rich and easy-to-use plugins and learning about Xaringan and Quarto has been an interesting experience for me!
