@@ -4,13 +4,21 @@ project:
 
 book:
   page-navigation: true
-  title: "RSE"
+  title: "🚀Jump into RSE"
   search: true
   author: "Yinhao Zhan"
   date: "21/03/2023"
   chapters:
     - index.qmd
     - intro.qmd
+    - 2+Portfolio+tools.qmd
+    - 3+Remote+sensing+data.qmd
+    - 4+Policy+applications.qmd
+    - 5+Google+Earth+Engine.qmd
+    - 6+Classification+I.qmd
+    - 7+Classification+II.qmd
+    - 8+Temperature+and+policy.qmd
+    - 9+Synthetic+Aperture+Radar+(SAR)+data.qmd
     - summary.qmd
     - references.qmd
   

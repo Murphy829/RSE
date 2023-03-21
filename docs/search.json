@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "RSE",
+    "title": "🚀Jump into RSE",
     "section": "",
-    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a Learing Diary about CASA0023-Remotely Sensing Cities and Environments. Course tutorials can be found here.The global icon in the left sidebar also works. Appreciation for Andy’s hard work on this module. I’ll always remember attending your course. You are the best teacher!\n\n\nHi! there. I am Yinhao Zhan from Shenzhen, China. I have an undergraduate degree in urban planning and have worked as a planner for a leading urban design instituteUrban Planning & Design Institute of Shenzhen for several years.I have a passion for geo data science, urban analysis, planning policys or practice and all things about cities.\nChiefly taking charge of regulatory planning and urban design during my work experience. However, it is insufficient for me to realize my career aspirations to work in a top urban design institution, engaging in smart city construction to optimize urban governance means and create sustainable and people-oriented cities through quantitative analysis.\nOne thing that drew me to this module was the potential of using remote sensing for multi-scale urban analysis and I thought this would be a great place to meet like-minded people.\n A paradigm study on the integration of green space and urban public space, from my urban design work project."
   },
   {
     "objectID": "intro.html",
@@ -16,9 +16,9 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "10  Summary",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "In summary, this book has no content whatsoever."
   },
   {
     "objectID": "references.html",
@@ -26,5 +26,12 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html#test",
+    "href": "summary.html#test",
+    "title": "10  Summary",
+    "section": "10.1 test",
+    "text": "10.1 test"
   }
 ]
