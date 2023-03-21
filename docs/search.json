@@ -61,5 +61,19 @@
     "title": "1  Introduction",
     "section": "1.2 [Remote sensing]",
     "text": "1.2 [Remote sensing]\nRemote sensing is the acquiring of information from a distance. NASA observes Earth and other planetary bodies via remote sensors on satellites and aircraft that detect and record reflected or emitted energy. Remote sensors, which provide a global perspective and a wealth of data about Earth systems, enable data-informed decision making based on the current and future state of our planet.  (Source: NASA. What is Remote Sensing? | Earthdata (nasa.gov))\n (Source: ESA. Copernicus Missions: Sentinel-1 images global landmasses, coastal zones and shipping routes with a C-band sensor)\nAdvantage of Remote Sensing\n\nData\n\nLarge area and time coverage.\nFrequency of updates.\nEasy data acquisition.\nProvide useful information in various wavebands.\nRepetitive coverage provides to monitor dynamic themes like agriculture.Stereo satellite data may be used for three-dimensional studies.\n\nData process\n\nFree processing resources like GEE.\n\nPolicy\n\nPolicy decesions being made using Remote Sensing.\n\n\nDisadvantage of Remote Sensing\n\nExpensive for small areas.\nRequires specialized training for analysis of images.\nAerial photos are costly if repetitive photos are required.\n\n[Overall view of working remote sensing system]\n\nThe origin of electromagnetic energy (sun transmitter carried by the sensor).\nTransmission of energy from the atmosphere of the earth.\nInteraction of energy with the earth’s surface (reflectance/absorption/transmission) or self-emission.\nTransmission of the reflectance/emitted energy to the remote sensor.\nDetection of energy by the sensor, converting it into a photograph may be digital or analog.\nTransmission/recording of the sensor output.\nPre-processing of the data and generation of the data product.\nA collection of ground truth and other collateral information.\nData analysis and interpretation.\nVarious themes, or other applications.\n\n (Source:GeoLearn)\n[Sensor]\nSensors, or instruments, aboard satellites and aircraft use the Sun as a source of illumination or provide their own source of illumination, measuring energy that is reflected back. Sensors that use natural energy from the Sun are called passive sensors; those that provide their own source of energy are called active sensors.\n\n(Source: NASA.What is Remote Sensing? | Earthdata (nasa.gov))\n[Electromagnetic]\nElectromagnetic energy, produced by the vibration of charged particles, travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies.\n(Source: NASA)\n[Data]\nThere are four types of resolution that affet the quality and nature of the data a sensor collects: Spatial,Spectral,Temporal and Radiometric. The select of data depends on these factors:Size of features, Date range, Revisit requirement, Spectral sensitivity, Cost.\n (Source: OneStopGIS)"
+  },
+  {
+    "objectID": "2+Portfolio+tools.html",
+    "href": "2+Portfolio+tools.html",
+    "title": "2  Portfolio tools",
+    "section": "",
+    "text": "🛡Lecture link ⚔Practical link\nA mindmap for this chapter, marking orange is the part that works best for me."
+  },
+  {
+    "objectID": "2+Portfolio+tools.html#summary",
+    "href": "2+Portfolio+tools.html#summary",
+    "title": "2  Portfolio tools",
+    "section": "2.1 Summary",
+    "text": "2.1 Summary\nThis week we learnt about Xaringan and Quarto, both of which can be based on the R language, for tasks such as note management, slideshow creation……"
   }
 ]

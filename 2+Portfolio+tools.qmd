@@ -4,4 +4,12 @@ title: "Portfolio tools"
 editor: visual
 ---
 
-## test
+[🛡Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1)<br/>
+[⚔Practical link](https://andrewmaclachlan.github.io/CASA0023/2_portfolio.html)<br/>
+
+<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/2%2BPortfolio%2Btools.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
+
+
+## Summary
+This week we learnt about Xaringan and Quarto, both of which can be based on the R language, for tasks such as note management, slideshow creation......
+
