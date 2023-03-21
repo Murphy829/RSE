@@ -1,17 +1,13 @@
 # Welcome👋 {.unnumbered}
 
-This is a Learing Diary about [CASA0023-Remotely Sensing Cities and Environments](https://www.ucl.ac.uk/module-catalogue/modules/remotely-sensing-cities-and-environments-CASA0023).<br/>
-Course tutorials can be found [here](https://andrewmaclachlan.github.io/CASA0023/).The global icon in the left sidebar also works.<br/>
-Appreciation for [Andy](https://www.ucl.ac.uk/bartlett/casa/people/dr-andrew-maclachlan)'s hard work on this module. I'll always remember attending your course. You are the best teacher!
+This is a Learing Diary about [CASA0023-Remotely Sensing Cities and Environments](https://www.ucl.ac.uk/module-catalogue/modules/remotely-sensing-cities-and-environments-CASA0023).<br/> Course tutorials can be found [here](https://andrewmaclachlan.github.io/CASA0023/).The global icon in the left sidebar also works.<br/> Appreciation for [Andy](https://www.ucl.ac.uk/bartlett/casa/people/dr-andrew-maclachlan)'s hard work on this module. I'll always remember attending your course. You are the best teacher!
 
 ## About me
 
 Hi! there. I am Yinhao Zhan from Shenzhen, China. I have an undergraduate degree in urban planning and have worked as a urban planner for a leading urban design institute[Urban Planning & Design Institute of Shenzhen](https://www.upr.cn/) for several years.I have a passion for geo data science, urban analysis, planning policys or practice and all things about cities.
 
-Chiefly taking charge of regulatory planning and urban design during my work experience. However, it is insufficient for me to realize my career aspirations to work in a top urban design institution, engaging in smart city construction to  optimize urban governance means and create sustainable and people-oriented cities through quantitative analysis. 
+Chiefly taking charge of regulatory planning and urban design during my work experience. However, it is insufficient for me to realize my career aspirations to work in a top urban design institution, engaging in smart city construction to optimize urban governance means and create sustainable and people-oriented cities through quantitative analysis.
 
 One thing that drew me to this module was the potential of using remote sensing for multi-scale urban analysis and I thought this would be a great place to meet like-minded people.
 
-<img width="700" alt="image" src="https://github.com/Murphy829/RSETEST/blob/main/imgs/green+city.jpg?raw=true"><br/>
-A paradigm study on the integration of green space and urban public space, from my urban design work project.
-
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/green+city.jpg?raw=true" alt="image" width="700"/><br/> An illustration of the integration of green space and urban public space, drawn by me, from my urban design work project.
