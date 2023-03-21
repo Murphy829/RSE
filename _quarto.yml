@@ -16,7 +16,7 @@ book:
   
   sidebar:
     background: "#D9E3E4"
-    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    logo: "https://github.com/Murphy829/RSE/blob/master/RSE.png?raw=true"
     favicon: images/SUN.ico
     pinned: true
     align: center
@@ -25,7 +25,7 @@ book:
         href: https://andrewmaclachlan.github.io/CASA0023/
         text: "NMFS Open Science"
       - icon: github
-        href: https://github.com/nmfs-opensci
+        href: https://github.com/Murphy829/RSE
         text: "RSE"
 
     style: "docked"
