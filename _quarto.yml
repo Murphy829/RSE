@@ -17,7 +17,7 @@ book:
   sidebar:
     background: "#D9E3E4"
     logo: "https://github.com/Murphy829/RSE/blob/master/RSE.png?raw=true"
-    favicon: images/SUN.ico
+    favicon: "https://raw.githubusercontent.com/Murphy829/RSE/master/SUN.ico"
     pinned: true
     align: center
     tools: 
