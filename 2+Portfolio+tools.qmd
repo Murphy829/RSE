@@ -4,17 +4,18 @@ title: "Portfolio tools"
 editor: visual
 ---
 
-[🛡Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1)<br/>
-[⚔Practical link](https://andrewmaclachlan.github.io/CASA0023/2_portfolio.html)<br/>
+[🛡Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1)<br/> [⚔️️️Practical link](https://andrewmaclachlan.github.io/CASA0023/2_portfolio.html)<br/>
 
 <img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/2%2BPortfolio%2Btools.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
 
-
 ## Summary
-This week we learnt about [Xaringan](https://github.com/yihui/xaringan) and [Quarto](https://quarto.org/), both of which can be based on the R language, for tasks such as note management, slideshow creation......
+
+This week we learnt about [Xaringan](https://github.com/yihui/xaringan) [Gallery🏛️](https://xaringan.gallery/examples.html) and [Quarto](https://quarto.org/) [Gallery🏛️](https://quarto.org/docs/gallery/), both of which can be based on the R language, for tasks such as note management, slideshow creation......
 
 ## Application
+
 One of this week's tasks was to create a slide presentation on remote sensing sensors using Xaringan.
 
 ## Reflection
+
 Quarto is seen as the next generation of R markdown, based on powerful features and has been growing in popularity since its release last year. Quarto's beautiful blog and website examples are impressive. However, as an Obsidian user, I am deeply involved in Obsidian's rich and easy-to-use plugins and learning about Xaringan and Quarto has been an interesting experience for me!
