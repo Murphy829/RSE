@@ -2,8 +2,4 @@
 
 This is a book created from markdown and executable code.
 
-See @knuth84 for additional discussion of literate programming.
-
-```{r}
-1 + 1
-```
+<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/312d014aa0a8838698db50bd1318201e3c3ed3d1/imgs/mindmaps/1%2BIntroduction.svg"/><br/> A mindmap for introduction chapter, marking orange is the part that works best for me.
