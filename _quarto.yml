@@ -1,0 +1,58 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  page-navigation: true
+  title: "RSE"
+  search: true
+  author: "Yinhao Zhan"
+  date: "21/03/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+  
+  sidebar:
+    background: "#D9E3E4"
+    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    favicon: images/SUN.ico
+    pinned: true
+    align: center
+    tools: 
+      - icon: globe
+        href: https://andrewmaclachlan.github.io/CASA0023/
+        text: "NMFS Open Science"
+      - icon: github
+        href: https://github.com/nmfs-opensci
+        text: "RSE"
+
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Welcome
+      - href: intro.qmd
+        text: 1 Introduction
+      - href: summary.qmd
+        text: summary
+      - href: references.qmd
+        text: references 
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      dark: [cosmo, theme-dark.scss]
+      light: [cosmo, theme.scss] 
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
