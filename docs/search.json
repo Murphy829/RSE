@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "🚀Jump into RSE",
     "section": "",
-    "text": "This is a Learing Diary about CASA0023-Remotely Sensing Cities and Environments. Course tutorials can be found here.The global icon in the left sidebar also works. Appreciation for Dr Andrew MacLachlan’s hard work on this module. I’ll always remember attending your course.\n\n\nHi! there. I am Yinhao Zhan from Shenzhen, China. I have an undergraduate degree in urban planning and have worked as a urban planner for a leading urban design instituteUrban Planning & Design Institute of Shenzhen for several years.I have a passion for geo data science, urban analysis, planning policys or practice and all things about cities.\nChiefly taking charge of regulatory planning and urban design during my work experience. However, it is insufficient for me to realize my career aspirations to work in a top urban design institution, engaging in smart city construction to optimize urban governance means and create sustainable and people-oriented cities through quantitative analysis.\nOne thing that drew me to this module was the potential of using remote sensing for multi-scale urban analysis and I thought this would be a great place to meet like-minded people.\n An illustration of the integration of green space and urban public space, drawn by me, from my urban design work project."
+    "text": "This is a Learing Diary about CASA0023-Remotely Sensing Cities and Environments. Course tutorials can be found here.The global icon in the left sidebar also works. Appreciation for Dr Andrew MacLachlan’s hard work on this module. I’ll always remember attending your course.\n\n\nHi there! I am Yinhao Zhan from Shenzhen, China. I have an undergraduate degree in urban planning and have worked as a urban planner for a leading urban design instituteUrban Planning & Design Institute of Shenzhen for several years.I have a passion for geo data science, urban analysis, planning policys or practice and all things about cities.\nChiefly taking charge of regulatory planning and urban design during my work experience. However, it is insufficient for me to realize my career aspirations to work in a top urban design institution, engaging in smart city construction to optimize urban governance means and create sustainable and people-oriented cities through quantitative analysis.\nOne thing that drew me to this module was the potential of using remote sensing for multi-scale urban analysis and I thought this would be a great place to meet like-minded people.\n An illustration of the integration of green space and urban public space, drawn by me, from my urban design work project."
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "A mindmap for introduction chapter, marking orange is the part that works best for me."
+    "text": "🛡️️Lecture link  ⚔️️Practical link\nA mindmap for this chapter, marking orange is the part that works best for me."
   },
   {
     "objectID": "summary.html",
@@ -33,5 +33,33 @@
     "title": "10  Summary",
     "section": "10.1 test",
     "text": "10.1 test"
+  },
+  {
+    "objectID": "intro.html#summary",
+    "href": "intro.html#summary",
+    "title": "1  Introduction",
+    "section": "1.1 Summary",
+    "text": "1.1 Summary\nThis week introduces basic concepts about remote sensing, physical principles, resolution of remote sensing data and data selection constraints, and familiarity with the software we will use.\n\n1.1.1 Remote sensing\nRemote sensing is the acquiring of information from a distance. NASA observes Earth and other planetary bodies via remote sensors on satellites and aircraft that detect and record reflected or emitted energy. Remote sensors, which provide a global perspective and a wealth of data about Earth systems, enable data-informed decision making based on the current and future state of our planet.  (Source: NASA. What is Remote Sensing? | Earthdata (nasa.gov))\n (Source: ESA. Copernicus Missions: Sentinel-1 images global landmasses, coastal zones and shipping routes with a C-band sensor)\nAdvantage of Remote Sensing\n\nData\n\nLarge area and time coverage.\nFrequency of updates.\nEasy data acquisition.\nProvide useful information in various wavebands.\nRepetitive coverage provides to monitor dynamic themes like agriculture.Stereo satellite data may be used for three-dimensional studies.\n\nData process\n\nFree processing resources like GEE.\n\nPolicy\n\nPolicy decesions being made using Remote Sensing.\n\n\nDisadvantage of Remote Sensing\n\nExpensive for small areas.\nRequires specialized training for analysis of images.\nAerial photos are costly if repetitive photos are required.\n\n\n\n1.1.2 Overall view of working remote sensing system\n\nThe origin of electromagnetic energy (sun transmitter carried by the sensor).\nTransmission of energy from the atmosphere of the earth.\nInteraction of energy with the earth’s surface (reflectance/absorption/transmission) or self-emission.\nTransmission of the reflectance/emitted energy to the remote sensor.\nDetection of energy by the sensor, converting it into a photograph may be digital or analog.\nTransmission/recording of the sensor output.\nPre-processing of the data and generation of the data product.\nA collection of ground truth and other collateral information.\nData analysis and interpretation.\nVarious themes, or other applications.\n\n (Source:GeoLearn)\n\n\n1.1.3 Sensor\nSensors, or instruments, aboard satellites and aircraft use the Sun as a source of illumination or provide their own source of illumination, measuring energy that is reflected back. Sensors that use natural energy from the Sun are called passive sensors; those that provide their own source of energy are called active sensors.\n\n(Source: NASA.What is Remote Sensing? | Earthdata (nasa.gov))\n\n\n1.1.4 Electromagnetic\nElectromagnetic energy, produced by the vibration of charged particles, travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies.\n(Source: NASA)\n\n\n1.1.5 Data\n\nThere are four types of resolution that affet the quality and nature of the data a sensor collects: Spatial,Spectral,Temporal and Radiometric.\nThe select of data depends on these factors: Size of features, Date range, Revisit requirement, Spectral sensitivity, Cost.\n\n (Source: OneStopGIS)"
+  },
+  {
+    "objectID": "intro.html#application",
+    "href": "intro.html#application",
+    "title": "1  Introduction",
+    "section": "1.2 Application",
+    "text": "1.2 Application"
+  },
+  {
+    "objectID": "intro.html#reflection",
+    "href": "intro.html#reflection",
+    "title": "1  Introduction",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection"
+  },
+  {
+    "objectID": "intro.html#remote-sensing",
+    "href": "intro.html#remote-sensing",
+    "title": "1  Introduction",
+    "section": "1.2 [Remote sensing]",
+    "text": "1.2 [Remote sensing]\nRemote sensing is the acquiring of information from a distance. NASA observes Earth and other planetary bodies via remote sensors on satellites and aircraft that detect and record reflected or emitted energy. Remote sensors, which provide a global perspective and a wealth of data about Earth systems, enable data-informed decision making based on the current and future state of our planet.  (Source: NASA. What is Remote Sensing? | Earthdata (nasa.gov))\n (Source: ESA. Copernicus Missions: Sentinel-1 images global landmasses, coastal zones and shipping routes with a C-band sensor)\nAdvantage of Remote Sensing\n\nData\n\nLarge area and time coverage.\nFrequency of updates.\nEasy data acquisition.\nProvide useful information in various wavebands.\nRepetitive coverage provides to monitor dynamic themes like agriculture.Stereo satellite data may be used for three-dimensional studies.\n\nData process\n\nFree processing resources like GEE.\n\nPolicy\n\nPolicy decesions being made using Remote Sensing.\n\n\nDisadvantage of Remote Sensing\n\nExpensive for small areas.\nRequires specialized training for analysis of images.\nAerial photos are costly if repetitive photos are required.\n\n[Overall view of working remote sensing system]\n\nThe origin of electromagnetic energy (sun transmitter carried by the sensor).\nTransmission of energy from the atmosphere of the earth.\nInteraction of energy with the earth’s surface (reflectance/absorption/transmission) or self-emission.\nTransmission of the reflectance/emitted energy to the remote sensor.\nDetection of energy by the sensor, converting it into a photograph may be digital or analog.\nTransmission/recording of the sensor output.\nPre-processing of the data and generation of the data product.\nA collection of ground truth and other collateral information.\nData analysis and interpretation.\nVarious themes, or other applications.\n\n (Source:GeoLearn)\n[Sensor]\nSensors, or instruments, aboard satellites and aircraft use the Sun as a source of illumination or provide their own source of illumination, measuring energy that is reflected back. Sensors that use natural energy from the Sun are called passive sensors; those that provide their own source of energy are called active sensors.\n\n(Source: NASA.What is Remote Sensing? | Earthdata (nasa.gov))\n[Electromagnetic]\nElectromagnetic energy, produced by the vibration of charged particles, travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies.\n(Source: NASA)\n[Data]\nThere are four types of resolution that affet the quality and nature of the data a sensor collects: Spatial,Spectral,Temporal and Radiometric. The select of data depends on these factors:Size of features, Date range, Revisit requirement, Spectral sensitivity, Cost.\n (Source: OneStopGIS)"
   }
 ]

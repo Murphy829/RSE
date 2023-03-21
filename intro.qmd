@@ -1,5 +1,90 @@
 # Introduction
 
-This is a book created from markdown and executable code.
+[🛡️️Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1) <br/>
+[⚔️️Practical link](https://andrewmaclachlan.github.io/CASA0023/intro.html) <br/>
 
-<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/312d014aa0a8838698db50bd1318201e3c3ed3d1/imgs/mindmaps/1%2BIntroduction.svg"/><br/> A mindmap for introduction chapter, marking orange is the part that works best for me.
+<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/312d014aa0a8838698db50bd1318201e3c3ed3d1/imgs/mindmaps/1%2BIntroduction.svg" /width="700"><br/>
+A mindmap for this chapter, marking orange is the part that works best for me.
+
+## Summary
+
+This week introduces basic concepts about remote sensing, physical principles, resolution of remote sensing data and data selection constraints, and familiarity with the software we will use.
+
+
+### Remote sensing
+
+**Remote sensing is the acquiring of information from a distance**. NASA observes Earth and other planetary bodies via remote sensors on satellites and aircraft that detect and record reflected or emitted energy. Remote sensors, which provide a global perspective and a wealth of data about Earth systems, enable data-informed decision making based on the current and future state of our planet. <br/>
+(Source: NASA. [What is Remote Sensing? \| Earthdata (nasa.gov)](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
+
+<img src="https://miro.medium.com/v2/resize:fit:1100/1*I2Cl0XIKlOaRDwjV79xq8A.gif"/ width="700"> <br/>(Source: ESA. [Copernicus Missions: Sentinel-1 images global landmasses, coastal zones and shipping routes with a C-band sensor](https://medium.com/google-earth/a-golden-age-for-earth-observation-f8b281cec4b7))
+
+**Advantage of Remote Sensing**<br/>
+
+- Data
+  - Large area and time coverage.
+  - Frequency of updates.
+  - Easy data acquisition.
+  - Provide useful information in various wavebands.
+  - Repetitive coverage provides to monitor dynamic themes like agriculture.Stereo satellite data may be used for three-dimensional studies.
+
+- Data process
+  - Free processing resources like GEE.
+  
+- Policy
+  - Policy decesions being made using Remote Sensing.
+
+**Disadvantage of Remote Sensing**<br/>
+
+- Expensive for small areas.
+- Requires specialized training for analysis of images.
+- Aerial photos are costly if repetitive photos are required.
+
+### Overall view of working remote sensing system 
+
+1. The origin of electromagnetic energy (sun transmitter carried by the sensor).<br/> 
+2. Transmission of energy from the atmosphere of the earth.<br/> 
+3. Interaction of energy with the earth’s surface (reflectance/absorption/transmission) or self-emission.<br/> 
+4. Transmission of the reflectance/emitted energy to the remote sensor.<br/> 
+5. Detection of energy by the sensor, converting it into a photograph may be digital or analog.<br/> 
+6. Transmission/recording of the sensor output.<br/> 
+7. Pre-processing of the data and generation of the data product.<br/> 
+8. A collection of ground truth and other collateral information.<br/> 
+9. Data analysis and interpretation.<br/> 
+10. Various themes, or other applications.<br/> 
+
+<img src="https://cdn-fnoci.nitrocdn.com/ThwtfMtLrzDTNYOmsRitVsOalzfIZLRK/assets/images/optimized/rev-8dc1b87/geolearn.in/wp-content/uploads/2022/09/9752c29b48640038080ec50e60b23dad.Remote-Sensing-Process.jpg" width="700"/><br/> (Source:[ GeoLearn](https://geolearn.in/the-basic-concept-of-remote-sensing/))
+
+### Sensor
+
+Sensors, or instruments, aboard satellites and aircraft use the Sun as a source of illumination or provide their own source of illumination, measuring energy that is reflected back. Sensors that use natural energy from the Sun are called passive sensors; those that provide their own source of energy are called active sensors.<br/>
+
+<img src="https://www.earthdata.nasa.gov/s3fs-public/styles/large_full_968px_/public/imported/activePassive.png?VersionId=5RwWhgdW7kFSdrcyM1stzRKQ1ku7ITEp&itok=rdAY4oLb" width="700"/><br/>
+
+(Source: NASA.[What is Remote Sensing? \| Earthdata (nasa.gov)](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
+
+### Electromagnetic
+
+Electromagnetic energy, produced by the vibration of charged particles, travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies.<br/>
+
+<img src="https://www.earthdata.nasa.gov/s3fs-public/imported/EMS-Introduction_0.jpeg?VersionId=rSEKLCj0F2zuFCQ6hRTw6zaBBipH.UWY" width="700"><br/>([Source: NASA](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
+
+
+### Data
+
+- There are four types of resolution that affet the quality and nature of the data a sensor collects: Spatial,Spectral,Temporal and Radiometric.<br/>
+- The select of data depends on these factors: Size of features, Date range, Revisit requirement, Spectral sensitivity, Cost.
+
+<img src="https://cdn.mindspritesolutions.com/onestopgis/Aerial-Photography/Digital-Imaging/Digital-Image/posts/Sensor-Resolutions-Radiometric-Spatial-Spectral-and-Temporal/Remotely-Sensed-Data.webp"/ width="700"><br/>
+(Source: [OneStopGIS](https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Digital-Image/2-Sensor-Resolutions-Radiometric-Spatial-Spectral-and-Temporal.html))
+
+
+## Application
+
+
+
+
+
+
+
+
+## Reflection

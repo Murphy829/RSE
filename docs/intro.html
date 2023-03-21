@@ -167,7 +167,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">1.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#remote-sensing" id="toc-remote-sensing" class="nav-link" data-scroll-target="#remote-sensing"><span class="toc-section-number">1.1.1</span>  Remote sensing</a></li>
+  <li><a href="#overall-view-of-working-remote-sensing-system" id="toc-overall-view-of-working-remote-sensing-system" class="nav-link" data-scroll-target="#overall-view-of-working-remote-sensing-system"><span class="toc-section-number">1.1.2</span>  Overall view of working remote sensing system</a></li>
+  <li><a href="#sensor" id="toc-sensor" class="nav-link" data-scroll-target="#sensor"><span class="toc-section-number">1.1.3</span>  Sensor</a></li>
+  <li><a href="#electromagnetic" id="toc-electromagnetic" class="nav-link" data-scroll-target="#electromagnetic"><span class="toc-section-number">1.1.4</span>  Electromagnetic</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="toc-section-number">1.1.5</span>  Data</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">1.2</span>  Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">1.3</span>  Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -188,10 +203,85 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is a book created from markdown and executable code.</p>
-<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/312d014aa0a8838698db50bd1318201e3c3ed3d1/imgs/mindmaps/1%2BIntroduction.svg"><br> A mindmap for introduction chapter, marking orange is the part that works best for me.</p>
+<p><a href="https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1">🛡️️Lecture link</a> <br> <a href="https://andrewmaclachlan.github.io/CASA0023/intro.html">⚔️️Practical link</a> <br></p>
+<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/312d014aa0a8838698db50bd1318201e3c3ed3d1/imgs/mindmaps/1%2BIntroduction.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
+<section id="summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<p>This week introduces basic concepts about remote sensing, physical principles, resolution of remote sensing data and data selection constraints, and familiarity with the software we will use.</p>
+<section id="remote-sensing" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="remote-sensing"><span class="header-section-number">1.1.1</span> Remote sensing</h3>
+<p><strong>Remote sensing is the acquiring of information from a distance</strong>. NASA observes Earth and other planetary bodies via remote sensors on satellites and aircraft that detect and record reflected or emitted energy. Remote sensors, which provide a global perspective and a wealth of data about Earth systems, enable data-informed decision making based on the current and future state of our planet. <br> (Source: NASA. <a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">What is Remote Sensing? | Earthdata (nasa.gov)</a>)</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1100/1*I2Cl0XIKlOaRDwjV79xq8A.gif" width="700"> <br>(Source: ESA. <a href="https://medium.com/google-earth/a-golden-age-for-earth-observation-f8b281cec4b7">Copernicus Missions: Sentinel-1 images global landmasses, coastal zones and shipping routes with a C-band sensor</a>)</p>
+<p><strong>Advantage of Remote Sensing</strong><br></p>
+<ul>
+<li>Data
+<ul>
+<li>Large area and time coverage.</li>
+<li>Frequency of updates.</li>
+<li>Easy data acquisition.</li>
+<li>Provide useful information in various wavebands.</li>
+<li>Repetitive coverage provides to monitor dynamic themes like agriculture.Stereo satellite data may be used for three-dimensional studies.</li>
+</ul></li>
+<li>Data process
+<ul>
+<li>Free processing resources like GEE.</li>
+</ul></li>
+<li>Policy
+<ul>
+<li>Policy decesions being made using Remote Sensing.</li>
+</ul></li>
+</ul>
+<p><strong>Disadvantage of Remote Sensing</strong><br></p>
+<ul>
+<li>Expensive for small areas.</li>
+<li>Requires specialized training for analysis of images.</li>
+<li>Aerial photos are costly if repetitive photos are required.</li>
+</ul>
+</section>
+<section id="overall-view-of-working-remote-sensing-system" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="overall-view-of-working-remote-sensing-system"><span class="header-section-number">1.1.2</span> Overall view of working remote sensing system</h3>
+<ol type="1">
+<li>The origin of electromagnetic energy (sun transmitter carried by the sensor).<br></li>
+<li>Transmission of energy from the atmosphere of the earth.<br></li>
+<li>Interaction of energy with the earth’s surface (reflectance/absorption/transmission) or self-emission.<br></li>
+<li>Transmission of the reflectance/emitted energy to the remote sensor.<br></li>
+<li>Detection of energy by the sensor, converting it into a photograph may be digital or analog.<br></li>
+<li>Transmission/recording of the sensor output.<br></li>
+<li>Pre-processing of the data and generation of the data product.<br></li>
+<li>A collection of ground truth and other collateral information.<br></li>
+<li>Data analysis and interpretation.<br></li>
+<li>Various themes, or other applications.<br></li>
+</ol>
+<p><img src="https://cdn-fnoci.nitrocdn.com/ThwtfMtLrzDTNYOmsRitVsOalzfIZLRK/assets/images/optimized/rev-8dc1b87/geolearn.in/wp-content/uploads/2022/09/9752c29b48640038080ec50e60b23dad.Remote-Sensing-Process.jpg" width="700"><br> (Source:<a href="https://geolearn.in/the-basic-concept-of-remote-sensing/">GeoLearn</a>)</p>
+</section>
+<section id="sensor" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="sensor"><span class="header-section-number">1.1.3</span> Sensor</h3>
+<p>Sensors, or instruments, aboard satellites and aircraft use the Sun as a source of illumination or provide their own source of illumination, measuring energy that is reflected back. Sensors that use natural energy from the Sun are called passive sensors; those that provide their own source of energy are called active sensors.<br></p>
+<p><img src="https://www.earthdata.nasa.gov/s3fs-public/styles/large_full_968px_/public/imported/activePassive.png?VersionId=5RwWhgdW7kFSdrcyM1stzRKQ1ku7ITEp&amp;itok=rdAY4oLb" width="700"><br></p>
+<p>(Source: NASA.<a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">What is Remote Sensing? | Earthdata (nasa.gov)</a>)</p>
+</section>
+<section id="electromagnetic" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="electromagnetic"><span class="header-section-number">1.1.4</span> Electromagnetic</h3>
+<p>Electromagnetic energy, produced by the vibration of charged particles, travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies.<br></p>
+<p><img src="https://www.earthdata.nasa.gov/s3fs-public/imported/EMS-Introduction_0.jpeg?VersionId=rSEKLCj0F2zuFCQ6hRTw6zaBBipH.UWY" width="700"><br>(<a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">Source: NASA</a>)</p>
+</section>
+<section id="data" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="data"><span class="header-section-number">1.1.5</span> Data</h3>
+<ul>
+<li>There are four types of resolution that affet the quality and nature of the data a sensor collects: Spatial,Spectral,Temporal and Radiometric.<br></li>
+<li>The select of data depends on these factors: Size of features, Date range, Revisit requirement, Spectral sensitivity, Cost.</li>
+</ul>
+<p><img src="https://cdn.mindspritesolutions.com/onestopgis/Aerial-Photography/Digital-Imaging/Digital-Image/posts/Sensor-Resolutions-Radiometric-Spatial-Spectral-and-Temporal/Remotely-Sensed-Data.webp" width="700"><br> (Source: <a href="https://www.onestopgis.com/Aerial-Photography/Digital-Imaging/Digital-Image/2-Sensor-Resolutions-Radiometric-Spatial-Spectral-and-Temporal.html">OneStopGIS</a>)</p>
+</section>
+</section>
+<section id="application" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
+</section>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
