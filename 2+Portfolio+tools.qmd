@@ -15,7 +15,7 @@ This week we learnt about [Xaringan](https://github.com/yihui/xaringan) [Gallery
 ## Application
 
 One of this week's tasks was to create a slide presentation about remote sensing sensors using Xaringan.
-[My slides](https://murphy829.github.io/WeekSlides/#1).
+[My slides gitpage](https://murphy829.github.io/WeekSlides/#1).
 
 
 ```{r embed-xaringan, echo=FALSE}
