@@ -56,6 +56,14 @@ Sensors, or instruments, aboard satellites and aircraft use the Sun as a source 
 
 (Source: NASA. [What is Remote Sensing? \| Earthdata (nasa.gov)](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))
 
+Push Broom and Whisk Broom Sensors (originally taught in Chapter 3, I've moved it here for ease of memory)
+
+Whisk broom scanners, also sometimes referred to as spotlight or across track scanners, use a mirror to reflect light onto a single detector. The mirror moves back and forth, to collect measurements from one pixel in the image at a time.<br/>
+
+Push broom scanners, also sometimes referred to as along track scanners, use a line of detectors arranged perpendicular to the flight direction of the spacecraft. As the spacecraft flies forward, the image is collected one line at a time, with all of the pixels in a line being measured simultaneously. One drawback of push broom sensors is that the detectors in the "push broom" can have varying sensitivity. If they are not perfectly calibrated, this can result in stripes in the data.
+
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/broomtype.jpg?raw=true" width="700"/><br/> (Source: [RF Wireless World](https://www.rfwireless-world.com/Terminology/Whiskbroom-sensor-vs-Pushbroom-sensor.html))
+
 ### Electromagnetic
 
 Electromagnetic energy, produced by the vibration of charged particles, travels in the form of waves through the atmosphere and the vacuum of space. These waves have different wavelengths (the distance from wave crest to wave crest) and frequencies.<br/>
@@ -85,7 +93,7 @@ Electromagnetic energy, produced by the vibration of charged particles, travels 
 Remote sensing technology applied to various fields: Land, vegetation, water bodies and oceans, surface energy and radiation balance, geology, urban, military......In China, the demand for remote sensing applications mainly comes from the government, the following are some examples of application scenarios.<br/>
 
 | Sector                  | Application categories      | Scenarios                              | Descriptions                                                                                    |
-|--------------|--------------|--------------|--------------------------------|
+|-----------------|-----------------|-----------------|---------------------|
 | Government sector       | National Land Resources     | Survey monitoring and evaluation       | Land Use Macro Monitoring, Land Resources Survey                                                |
 | Government sector       | National Land Resources     | Development and use monitoring         | 24/7 monitoring of land resources                                                               |
 | Government sector       | Emergency management        | Disaster monitoring                    | Disaster monitoring and analysis, disaster big data analysis                                    |

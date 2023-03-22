@@ -1,6 +1,6 @@
 # Welcome👋 {.unnumbered}
 
-This is a Learing Diary about [CASA0023-Remotely Sensing Cities and Environments](https://www.ucl.ac.uk/module-catalogue/modules/remotely-sensing-cities-and-environments-CASA0023).<br/> Course tutorials can be found [here](https://andrewmaclachlan.github.io/CASA0023/).The global icon in the left sidebar also works.<br/> Appreciation for [Dr Andrew MacLachlan](https://www.ucl.ac.uk/bartlett/casa/people/dr-andrew-maclachlan)'s hard work on this module. I'll always remember attending your course.
+This is a Learing Diary about [CASA0023-Remotely Sensing Cities and Environments](https://www.ucl.ac.uk/module-catalogue/modules/remotely-sensing-cities-and-environments-CASA0023).<br/> Course tutorials can be found [here](https://andrewmaclachlan.github.io/CASA0023/).The global icon in the left sidebar also works.<br/> Appreciation for [Dr Andrew MacLachlan](https://www.ucl.ac.uk/bartlett/casa/people/dr-andrew-maclachlan)'s and [Wenlan Zhang (Ph.D. Candidate)](https://www.ucl.ac.uk/bartlett/casa/wenlan-zhang)'s hard work on this module. I'll always remember attending your course.
 
 ## About me
 

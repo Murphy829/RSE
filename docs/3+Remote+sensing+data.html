@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">3.1</span>  Summary</a>
   <ul class="collapse">
   <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><span class="toc-section-number">3.1.1</span>  Corrections</a></li>
-  <li><a href="#enhancement" id="toc-enhancement" class="nav-link" data-scroll-target="#enhancement"><span class="toc-section-number">3.1.2</span>  Enhancement</a></li>
+  <li><a href="#joining-data-sets-enhancements" id="toc-joining-data-sets-enhancements" class="nav-link" data-scroll-target="#joining-data-sets-enhancements"><span class="toc-section-number">3.1.2</span>  Joining data sets / Enhancements</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">3.2</span>  Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">3.3</span>  Reflection</a></li>
@@ -204,20 +204,142 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/3%2BRemote%2Bsensing%2Bdata.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<p>Based on the understanding of the causes of distortion of remote sensing images, this week I learnt about the principles of pre-processing remote sensing image data, which are divided into correction and enhancement. I also learnt the basic concepts and specific steps of correction and enhancement by using R.</p>
 <section id="corrections" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">3.1.1</span> Corrections</h3>
+<p>When a remote sensing sensor receives electromagnetic radiation energy from a feature, the inconsistency between the measured value of the remote sensing sensor and the actual spectral emissivity of the feature, caused by the transmission of electromagnetic waves in the atmosphere and sensor measurements, is known as radiometric aberration, due to the effects of the characteristics of the remote sensing sensor itself, the lighting conditions of the feature (terrain effects and solar altitude angle effects) and atmospheric effects.<br></p>
+<p>Geometric aberrations occur when the geometric position, shape, size, orientation and other features of features on the original image do not match the requirements for representation in the reference system.<br></p>
+<p>Geometric and atmospheric corrections are pre-processing processes that address these two forms of aberration.<br></p>
+<p><img src="https://cdn-fnoci.nitrocdn.com/ThwtfMtLrzDTNYOmsRitVsOalzfIZLRK/assets/images/optimized/rev-8dc1b87/geolearn.in/wp-content/uploads/2022/02/d2a4f08f3f5e19c847e3af90315b5732.Geometric-correction.jpg" width="700"><br> (Source: <a href="https://geolearn.in/geometric-corrections-in-remote-sensing-images/#Need_for_Geometric_Corrections">Geolearn</a>)</p>
+<section id="geometric-corrections" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="geometric-corrections"><span class="header-section-number">3.1.1.1</span> Geometric corrections</h4>
+<p>It is usually necessary to pre-process the remotely sensed data and remove the geometric distortion so that individual picture elements are in their proper planimetric (x, y) map locations.(<a href="https://geolearn.in/geometric-corrections-in-remote-sensing-images/#Need_for_Geometric_Corrections">Geolearn</a>)</p>
+<p><img src="http://4.bp.blogspot.com/-700NPLNjHaI/U1Bp46d87dI/AAAAAAAAB1k/vSr-MNh6YLk/s1600/2.PNG" width="700/"><br> (Example of Geometric corrections. Source: <a href="http://geography338.blogspot.com/2014/04/geometric-correction.html">geography338.blog</a>)</p>
+<ul>
+<li><p>Causes of distortions</p>
+<ul>
+<li>View angle (off-nadir)</li>
+</ul></li>
+<li><p>Topography (e.g.&nbsp;hills not flat ground)</p></li>
+<li><p>Wind (if from a plane)</p></li>
+<li><p>Rotation of the earth (from satellite)</p></li>
+<li><p>Process of Geometric corrections</p>
+<ul>
+<li>Coordinate transformation: Transformation of spatial position (image element coordinates)
+<ul>
+<li>Take the coordinates and model them to give geometric transformation coefficients</li>
+<li>Plot these and try to minimise the RMSE - Jensen sets a RMSE value of 0.5 <img src="https://www.researchgate.net/profile/Abdul-Basith-5/publication/320710942/figure/fig7/AS:555107663659009@1509359388657/Geometric-correction-procedures.png" width="700"><br> (Source: <a href="https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942">Abdul Basith</a>)</li>
+</ul></li>
+<li>Resample: recalculation of pixel grayscale values
+<ul>
+<li>Nearest Neighbor</li>
+<li>Linear</li>
+<li>Cubic</li>
+<li>Cubic spline <img src="https://www.researchgate.net/profile/Peter-Bobrowsky/publication/253213007/figure/fig48/AS:559223604826117@1510340705264/Resampling-methods.png" width="700/"><br> (Source: <a href="https://www.researchgate.net/figure/Resampling-methods_fig48_253213007">Peter T. Bobrowsky</a>)</li>
+</ul></li>
+</ul></li>
+</ul>
 </section>
-<section id="enhancement" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="enhancement"><span class="header-section-number">3.1.2</span> Enhancement</h3>
+<section id="atmospheric-correction" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.1.2</span> Atmospheric correction</h4>
+<p>Atmospheric correction is a kind of Radiometric correction. The objective of atmospheric correction is to determine true surface reflectance values by removing atmospheric effects from satellite images (<a href="https://www.researchgate.net/profile/Kyriacos-Themistocleous/publication/257067491_The_importance_of_considering_atmospheric_correction_in_the_pre-processing_of_satellite_remote_sensing_data_intended_for_the_management_and_detection_of_cultural_sites_a_case_study_of_the_Cyprus_area/links/57ffcf0108ae6fc7fc6523f0/The-importance-of-considering-atmospheric-correction-in-the-pre-processing-of-satellite-remote-sensing-data-intended-for-the-management-and-detection-of-cultural-sites-a-case-study-of-the-Cyprus-area.pdf">Themistocleous et al., 2008</a>).</p>
+<p><img src="https://hls.gsfc.nasa.gov/wp-content/uploads/2018/10/AC_LaSRC_example.jpg.jpeg" width="700"><br> (Example of Atmospheric correction. Source: <a href="https://hls.gsfc.nasa.gov/algorithms/atmospheric-correction/">NASA</a>)</p>
+<ul>
+<li><p>Causes of environmental attenuation</p>
+<ul>
+<li>Atmospheric scattering</li>
+<li>Topographic attenuation</li>
+</ul></li>
+<li><p>Necessary and unnecessary atmospheric correction</p>
+<ul>
+<li>Unnecessary</li>
+</ul></li>
+<li><p>Classification of a single image</p></li>
+<li><p>Independent classification of multi date imagery</p></li>
+<li><p>Composite images (combining images)</p></li>
+<li><p>Single dates or where training data extracted from all data</p>
+<ul>
+<li>Necessary</li>
+</ul></li>
+<li><p>Biophysical parameters needed (e.g.&nbsp;temperature, leaf area index, NDVI)</p></li>
+<li><p>E.g. .. .NDVI is used in the Africa Famine Early Warning System and Livestock Early Warning System</p></li>
+<li><p>Using spectral signatures through time and space</p></li>
+<li><p>Types of atmospheric correction</p>
+<ul>
+<li><p>Relative atmospheric correction: Relative atmospheric correction (AC) methods avoid the evaluation of atmospheric components of any kind. They rely on the fact that, for one sensor channel, the relation between the radiances at Top Of Atmopshere and at ground level follows a linear trend for the variety of Earth features present in the image. This linear relation is in fact an approximation of reality, but for practical purposes it is precise enough when there are other, more important sources of error.(<a href="https://ltb.itc.utwente.nl/498/concept/81688">UT</a>)</p></li>
+<li><p>Absolute atmospheric correction: Absolute atmospheric correction (AC) methods require a description of the components in the atmospheric profile. The output of these methods is an image that matches the reflectance of the ground pixels with a maximum estimated error of 10%, provided that atmospheric profiling is adequate enough. This image can be used for flux quantifications, parameter evolution assessments, etc., as mentioned above. The advantage of these methods is that ground reflectance can be evaluated for any atmospheric condition, altitude and relative geometry between the Sun and satellite. The disadvantage is that the atmospheric profiling required for these methods is rarely available. To address this inconvenience, various absolute AC methods have been developed that have different requirements in relation to the atmospheric profiling data—and differences in the accuracy of the results. (<a href="https://ltb.itc.utwente.nl/498/concept/81461">UT</a>)</p></li>
+</ul></li>
+<li><p>Methods of atmospheric correction</p></li>
+<li><p>empirical line method</p></li>
+<li><p>image-based methods</p>
+<ul>
+<li>histogram minimum method</li>
+</ul></li>
+<li><p>regression method</p></li>
+<li><p>radiative transfer models</p></li>
+</ul>
+</section>
+<section id="orthorectification-correction-topographic-correction" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="orthorectification-correction-topographic-correction"><span class="header-section-number">3.1.1.3</span> Orthorectification correction / topographic correction</h4>
+<p>A subset of georectification, requires sensor geometry and an elevation model. Nd atmospheric correction happens before topographic correction. - georectification = giving coordinates to an image - orthorectification = removing distortions… making the pixels viewed at nadir (straight down)</p>
+<p><img src="https://www.esri.com/about/newsroom/wp-content/uploads/files/2016/06/imagery.jpg" width="700/"><br> (Example of Orthorectification correction. Source: <a href="https://www.esri.com/about/newsroom/insider/what-is-orthorectified-imagery/">esri</a>)</p>
+</section>
+<section id="radiometric-calibration" class="level4" data-number="3.1.1.4">
+<h4 data-number="3.1.1.4" class="anchored" data-anchor-id="radiometric-calibration"><span class="header-section-number">3.1.1.4</span> Radiometric Calibration</h4>
+<p>Radiometric Calibration refers to the ability to convert the digital numbers recorded by satellite imaging systems into physical units. (<a href="https://www.sdstate.edu/image-processing-lab/radiometric-calibration">SDSU</a>)</p>
+<p><img src="https://www.researchgate.net/profile/Vicenc-Pala/publication/224301411/figure/fig3/AS:667803497558025@1536228169646/Example-of-radiometric-calibration-of-DMC-RGB-bands-Subescene-a1-and-a2-are-raw-DMC.png" width="700/"><br> (Example of radiometric calibration. Source: Rodrigo et al., 2007)</p>
+<p><img src="https://cwcaribbean.aoml.noaa.gov/bilko/module7/lesson3/images/Image12.gif" width="700/"><br> (Simplified schematic of atmospheric interference and the passage of electromagnetic radiation from the Sun to the satellite sensor. Source: <a href="https://cwcaribbean.aoml.noaa.gov/bilko/module7/lesson3/">Newcastle Univesrity</a>)</p>
+<ul>
+<li>Key terms</li>
+<li>Digital number (DN): DN is a variable assigned to a pixel, usually in the form of a binary integer in the range of 0–255 (i.e.&nbsp;a byte)</li>
+<li>Radiance: Radiance is the variable directly measured by remote sensing instruments. Basically, you can think of radiance as how much light the instrument “sees” from the object being observed.</li>
+<li>Reflectance: Reflectance is a property of a material (e.g.&nbsp;reflectance of grass is a property of grass)</li>
+</ul>
+</section>
+</section>
+<section id="joining-data-sets-enhancements" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="joining-data-sets-enhancements"><span class="header-section-number">3.1.2</span> Joining data sets / Enhancements</h3>
+<section id="joining-data-sets" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="joining-data-sets"><span class="header-section-number">3.1.2.1</span> Joining data sets</h4>
+<p>This is termed “Mosaicking” in remote sensing - but it’s not much different to merging in GIS.<br></p>
+<p>Here is an example of a Landsat 8 band 753 colour-composite without seamless mosaicing: <img src="https://i.stack.imgur.com/pz969.jpg" width="700"><br> And here is the same image with the use of the Mosaic With Feathering tool: <img src="https://i.stack.imgur.com/40TCX.jpg" width="700"><br> (Example of a Landsat 8 band 753 colour-composite without seamless mosaicking. Source: <a href="https://gis.stackexchange.com/questions/127310/how-to-create-a-mosaic-in-qgis-with-cutline-and-feathering-for-landsat-8-imagery">WhiteboxDev</a>)</p>
+</section>
+<section id="enhancements" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="enhancements"><span class="header-section-number">3.1.2.2</span> Enhancements</h4>
+<p>In terms of the object of action, contrast enhancement corresponds mainly to the image element, while filter enhancement takes into account the relationship between the image element and its neighbour elements.</p>
+<ul>
+<li><p>Contrast Enhancement Image enhancement is the procedure of improving the quality and the information content of original data before processing.( <a href="https://www.sciencedirect.com/science/article/pii/B9780124160057000064">Haldar, 2018</a>) <img src="https://www.earthdatascience.org/images/earth-analytics/raster-data/raster-image-stretch-dark.jpg" width="700/"><br> （Example of contrast stretch, Source:<a href="https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/intro-naip/">Earth Lab</a>）</p></li>
+<li><p>Ratio Normalized Burn Ratio (NBR) is used to identify burned areas and provide a measure of burn severity. It is calculated as a ratio between the NIR and SWIR values in traditional fashion. <br></p></li>
+</ul>
+<p><img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/SR-NBR.JPG?itok=j-oHX3TI" width="700/"><br></p>
+<p>(Example of Normalized Burn Ratio. Source: <a href="https://www.usgs.gov/landsat-missions/landsat-normalized-burn-ratio">USGS</a>)</p>
+<ul>
+<li><p>Filtering Low pass or low frequency (averages the surrounding pixels), High pass or high frequency - enhance local variations.</p></li>
+<li><p>PCA To retain key information, reduce data volume and enhance or extract useful information through function transformation.</p></li>
+<li><p>Principal Component</p></li>
+<li><p>Transform multi-spectral data into uncorrelated and smaller dataset</p></li>
+<li><p>Has most of the original information</p></li>
+<li><p>Reduces future computation “dimensionatliy reduction”</p></li>
+<li><p>The first component will capture most of the variance within the dataset</p></li>
+<li><p>In R this is from the RStoolbox packager asterPCA()</p></li>
+<li><p>Texture Texture: spatial variation of gray values.</p></li>
+<li><p>Fusion Image fusion is where data from multiple sensors / sources is fused together.</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section id="application" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
-<p>XXX</p>
+<ul>
+<li><p>Agricultural monitoring For agricultural applications, in which several vegetation indices are applied for monitoring purposes, multi-temporal images are used. The integration of vegetation indices from remotely sensed images with other hydro-meteorological data is widely used for monitoring natural hazards such as droughts.( <a href="https://nhess.copernicus.org/articles/10/89/2010/">Hadjimitsis et al., 2010</a>)</p></li>
+<li><p>Shoreline Extraction Coastline is one of the most important linear features on the earth’s surface, which display a dynamic nature. Coastal zone, and its environmental management requires the information about coastlines and their changes. This paper examines the current methods of coastline change detection using satellite images. Based on the advantages and drawbacks of the methods, a new procedure has been developed.（<a href="https://link.springer.com/article/10.1007/BF03325962">Alesheikh et al., 2007</a>）</p></li>
+</ul>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
-<p>XXX</p>
+<p>This week’s course was very technical and fundamental to the processing of remote sensing data, involving a lot of terminology and knowledge of physics and mathematics.</p>
+<p>In China, the use of high-resolution remote sensing imagery and POI data to enhance the accuracy of the status quo survey has emerged in the task of spatial planning of land. In urban areas, combining remote sensing data with POI data can well compensate for the slow update rate of remote sensing image data and the lack of type attribute information. (<a href="https://www.mdpi.com/2072-4292/12/7/1088">Ming et al.,2020</a>)</p>
+<p><img src="https://www.mdpi.com/remotesensing/remotesensing-12-01088/article_deploy/html/images/remotesensing-12-01088-g021-550.jpg" width="700/"><br> (The demonstration of Random Forest (RF) and AlexNet classification results. Source:(<a href="https://www.mdpi.com/2072-4292/12/7/1088">Ming et al.,2020</a>))</p>
 
 
 </section>
