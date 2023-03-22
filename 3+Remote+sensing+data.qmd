@@ -1,5 +1,25 @@
 ---
 title: "Remote sensing data"
-author: "Yinhao Zhan"
+
 editor: visual
 ---
+
+
+
+[🛡Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-3/#1)<br/>
+[⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/3_corrections.html)<br/>
+
+
+<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/3%2BRemote%2Bsensing%2Bdata.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
+
+## Summary
+
+This week 
+
+## Application
+
+XXX
+
+## Reflection
+
+XXX

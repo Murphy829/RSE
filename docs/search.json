@@ -89,5 +89,33 @@
     "title": "2  Portfolio tools",
     "section": "2.3 Reflection",
     "text": "2.3 Reflection\nQuarto is seen as the next generation of R markdown, based on powerful features and has been growing in popularity since its release last year. Quarto’s beautiful blog and website examples are impressive. However, as an Obsidian user, I am deeply involved in Obsidian’s rich and easy-to-use plugins and learning about Xaringan and Quarto has been an interesting experience for me!"
+  },
+  {
+    "objectID": "3+Remote+sensing+data.html",
+    "href": "3+Remote+sensing+data.html",
+    "title": "3  Remote sensing data",
+    "section": "",
+    "text": "🛡Lecture link ⚔️Practical link\nA mindmap for this chapter, marking orange is the part that works best for me."
+  },
+  {
+    "objectID": "3+Remote+sensing+data.html#summary",
+    "href": "3+Remote+sensing+data.html#summary",
+    "title": "3  Remote sensing data",
+    "section": "3.1 Summary",
+    "text": "3.1 Summary\nThis week we learnt about Xaringan🏛️ and Quarto🏛, both of which can be based on the R language, for tasks such as note management, slideshow creation……"
+  },
+  {
+    "objectID": "3+Remote+sensing+data.html#application",
+    "href": "3+Remote+sensing+data.html#application",
+    "title": "3  Remote sensing data",
+    "section": "3.2 Application",
+    "text": "3.2 Application\nOne of this week’s tasks was to create a slide presentation on remote sensing sensors using Xaringan."
+  },
+  {
+    "objectID": "3+Remote+sensing+data.html#reflection",
+    "href": "3+Remote+sensing+data.html#reflection",
+    "title": "3  Remote sensing data",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection\nQuarto is seen as the next generation of R markdown, based on powerful features and has been growing in popularity since its release last year. Quarto’s beautiful blog and website examples are impressive. However, as an Obsidian user, I am deeply involved in Obsidian’s rich and easy-to-use plugins and learning about Xaringan and Quarto has been an interesting experience for me!"
   }
 ]
