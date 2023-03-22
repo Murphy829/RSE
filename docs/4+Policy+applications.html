@@ -171,8 +171,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4.1</span>  Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">4.2</span>  Application</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#dynamic-monitoring" id="toc-dynamic-monitoring" class="nav-link" data-scroll-target="#dynamic-monitoring"><span class="toc-section-number">4.1.1</span>  Dynamic monitoring</a></li>
+  <li><a href="#feature-identification" id="toc-feature-identification" class="nav-link" data-scroll-target="#feature-identification"><span class="toc-section-number">4.1.2</span>  Feature identification</a></li>
+  <li><a href="#disaster-prevention-and-mitigation" id="toc-disaster-prevention-and-mitigation" class="nav-link" data-scroll-target="#disaster-prevention-and-mitigation"><span class="toc-section-number">4.1.3</span>  Disaster prevention and mitigation</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">4.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#sdgs-1" id="toc-sdgs-1" class="nav-link" data-scroll-target="#sdgs-1"><span class="toc-section-number">4.2.1</span>  SDGs-1</a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">4.3</span>  Reflection</a></li>
   </ul>
 </nav>
@@ -200,15 +208,89 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/4%2BPolicy%2Bapplications.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
 <section id="summary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
-<p>This week</p>
+<p>This week begins with an review to common applications of remote sensing data and an analysis of the powerful potential of remote sensing data from a policy perspective. Remo te sensing data is already characterised by high accuracy, 24/7 monitoring and rapid automated processing. In a wide range of fields such as disaster prevention, health, energy, climate, water, ecology and agriculture, remote sensing data is used to provide government decision makers with a comprehensive range of services from monitoring to assessment to improve the quality of human life worldwide.</p>
+<p>These can be roughly divided into the areas of dynamic monitoring, feature identification, disaster prevention and mitigation, etc. <br>(I categorise the example application from lecture according to my personal interests and add some examples from China.)</p>
+<p>research on remote sensing in cities has focused on these two areas: (a) issues resulting from the expansion of urban environments, and (b) sustainable urban development.(<a href="https://link.springer.com/article/10.1007/s41207-016-0007-4">Kadhim et al., 2016</a>), In the area of sustainable development, my policy of choice is SDGs-1. Thinking about a developing country like China, how to monitor poor areas.</p>
+<section id="dynamic-monitoring" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="dynamic-monitoring"><span class="header-section-number">4.1.1</span> Dynamic monitoring</h3>
+<ul>
+<li>Urban expansion – Landsat ([Zhang et al,. 2018(https://link.springer.com/article/10.1007/s11769-018-0988-9)]).</li>
+<li>Monitoring forests + illegal logging –Landsat (2000 to 2012).</li>
+<li>Urban area mapping – SAR, InSAR.</li>
+<li>Multi-temporal land cover (or land use) mapping.</li>
+<li>Urban green spaces –Landsat (medium res 17%),Sentinel, LiDAR, High spatial resolution, High + medium resolution……</li>
+<li>The power plant construction schedule and the environmental impact of the construction actions are monitored dynamically.</li>
+<li>Changes in the area of a large number of water bodies.</li>
+<li>Melting state of glaciers and snow.</li>
+</ul>
+</section>
+<section id="feature-identification" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="feature-identification"><span class="header-section-number">4.1.2</span> Feature identification</h3>
+<ul>
+<li>Damage detection.</li>
+<li>Illegal constructions detection<a href="https://ieeexplore.ieee.org/document/9191992">Chen et al.2020</a>. A example from Shenzhen is that since 2006, the dynamic monitoring work of satellite remote sensing within the ecological control line has been launched, using satellite remote sensing as an advanced technical means to dynamically monitor the city’s construction behaviour located within the basic ecological control line.(<a href="http://www.taibo.cn/p/53">News: Remote Sensing Monitoring of Unauthorized Construction in Shenzhen</a>)</li>
+<li>Structured Outdoor Architecture Reconstruction <a href="https://openaccess.thecvf.com/content_CVPR_2020/html/Zhang_Conv-MPN_Convolutional_Message_Passing_Neural_Network_for_Structured_Outdoor_Architecture_CVPR_2020_paper.html">Zhang et al.2020</a>.</li>
+</ul>
+</section>
+<section id="disaster-prevention-and-mitigation" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="disaster-prevention-and-mitigation"><span class="header-section-number">4.1.3</span> Disaster prevention and mitigation</h3>
+<ul>
+<li>Droughts – Sentinel moisture index.</li>
+<li>Forest fires – Landsat TM 1984.</li>
+<li>Earthquakes – SAR, InSAR.</li>
+<li>Urban flooding (lower backscatter coefficient) – SAR,InSAR.</li>
+<li>Air pollution and LULC – Sentinel-3 Sea and Land Surface Temperature, Sentinel-5 Precursor Major Air Pollutants.</li>
+</ul>
+</section>
 </section>
 <section id="application" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> Application</h2>
-<p>XXX</p>
+<section id="sdgs-1" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="sdgs-1"><span class="header-section-number">4.2.1</span> SDGs-1</h3>
+<ul>
+<li>Case country :China</li>
+<li>Policy
+<ul>
+<li><a href="https://www.undp.org/sustainable-development-goals/no-poverty">SDGs-1: NO POVERTY, 2015</a> Content: End poverty in all forms and dimensions by 2030. <img src="https://sdgs.un.org/sites/default/files/2022-07/SDG%20Report%202022_Goal%201%20infographic.png" width="700"><br> (Source:<a href="https://sdgs.un.org/goals/goal1">UN</a>)</li>
+<li><a href="https://www.un.org/development/desa/dspd/wp-content/uploads/sites/22/2021/05/Xie_Presentation-Lunyu-XIE1.pdf">Targeted poverty-alleviation strategy, 2014</a> Content: To apply scientific and effective procedures for precise identification, precise assistance and precise management of poverty alleviation targets in response to different poverty-stricken regional environments and the conditions of different poor farming households. <img src="http://epaper.chinadaily.com.cn/images/202209/12/631e8c5ca3109375854cc026.png" width="700"><br> (Source: <a href="http://epaper.chinadaily.com.cn/a/202209/12/WS631e8c5da3109375516ef209.html">China Daily Global</a>)</li>
+</ul></li>
+<li>Overview<br> Using socio-economic data and remote sensing data to assess the economic development of national poor counties based on predictive models. Firstly, in order to verify the rate of economic development in poor areas, the economic growth of more than five hundred poor counties is compared with the national growth rate; secondly, in order to study whether the gap between the rich and the poor has narrowed between regions, the trend of the change in economic differences between poor counties is compared. Providing an efficient and accurate means of assessing economic development on a large scale.</li>
+</ul>
+<p><img src="https://www.researchgate.net/publication/346065182/figure/fig3/AS:984639615287298@1611767786371/Geographical-distribution-of-impoverished-counties-in-China-Source-Heilig-GK.ppm" width="700"><br> (Geographical distribution of impoverished counties in China. Source:Heilig et al., 2006. Poverty Alleviation in China: A Lesson for the Developing World? )</p>
+<ul>
+<li><p>Reference papers</p>
+<ul>
+<li><a href="https://www.science.org/doi/10.1126/science.aaf7894">Jean, Neal, et al., “Combining satellite imagery and machine learning to predict poverty.”</a></li>
+<li><a href="https://www.nature.com/articles/s41467-020-16185-w">Yeh et al., “Using publicly available satellite imagery and deep learning to understand economic well-being in Africa.”</a></li>
+<li><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1700319114">Pokhriyal et al., “Combining disparate data sources for improved poverty prediction and mapping.”</a></li>
+</ul></li>
+<li><p>Data</p>
+<ul>
+<li>Google satellite imagery (from Google Earth)</li>
+<li>Sentinel</li>
+<li>LAI(Leaf Area Index)</li>
+<li>Vector county Boundaries</li>
+<li>Economic Development Data like GDP and TRSCG</li>
+<li>Census data count by county</li>
+</ul></li>
+<li><p>Time frame<br> Targeted poverty-alleviation strategy was published in 2014, We can choose two time ranges, 2018-2013 and 2014-2022, before and after the policy was released.</p></li>
+<li><p>Unit frame<br> 529 national poverty counties.</p></li>
+<li><p>Work frame</p>
+<ul>
+<li>Using Google satellite imagery data, Sentinel, and LAI, to get extraction of data from farmland, built-up areas of towns, rivers and roads.</li>
+<li>Using deep learning models to obtain MDI.</li>
+<li>Comparing the economic changes in poor counties before and after the implementation of the Targeted poverty-alleviation strategy.</li>
+</ul></li>
+</ul>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
-<p>XXX</p>
+<p>The important role of science and technology in contributing to the achievement of the UN Sustainable Development Goals (SDGs) has become an international consensus. EO data has made an important contribution as a scientific and technological tool to support the implementation of the 2030 Agenda and to the technology facilitation mechanism to support the achievement of the Sustainable Development Goals.</p>
+<ul>
+<li>Chinese experiences supporting SDG<br> “China’s efforts in the application of EO Data for the SDGs may be of interest to a number of other developing countries, especially those lacking technical capacity,” the report says, noting that research into the use of EO Data for the SDGs is an important contribution by China to the 2030 Agenda for Sustainable Development.<br> <img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/BigEarthData.png?raw=true" width="700"><br> (The technological systems of the Big Earth Data science . Source:<a href="https://www.fmprc.gov.cn/mfa_eng/topics_665678/2030kcxfzyc/202109/P020211019152777729038.pdf">Big Earth Data in Support of the Sustainable Development Goals,2021</a>)</li>
+</ul>
+<p><img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/SDGROADMAP.png?raw=true" width="700"><br> (Big Earth Data Supporting SDG Roadmap . Source:<a href="https://www.fmprc.gov.cn/mfa_eng/topics_665678/2030kcxfzyc/202109/P020211019152777729038.pdf">Big Earth Data in Support of the Sustainable Development Goals,2021</a>) <img src="http://newsletter.cas.cn/wap/International_Cooperation/201911/W020191101521396891779.png" width="700"><br></p>
 
 
 </section>

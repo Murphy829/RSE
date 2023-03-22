@@ -10,12 +10,112 @@ editor: visual
 
 ## Summary
 
-This week
+This week begins with an review to common applications of remote sensing data and an analysis of the powerful potential of remote sensing data from a policy perspective. Remo te sensing data is already characterised by high accuracy, 24/7 monitoring and rapid automated processing. In a wide range of fields such as disaster prevention, health, energy, climate, water, ecology and agriculture, remote sensing data is used to provide government decision makers with a comprehensive range of services from monitoring to assessment to improve the quality of human life worldwide.
+
+These can be roughly divided into the areas of dynamic monitoring, feature identification, disaster prevention and mitigation, etc. <br/>(I categorise the example application from lecture according to my personal interests and add some examples from China.)
+
+research on remote sensing in cities has focused on these two areas: (a) issues resulting from the expansion of urban environments, and (b) sustainable urban development.([Kadhim et al., 2016](https://link.springer.com/article/10.1007/s41207-016-0007-4)), In the area of sustainable development, my policy of choice is SDGs-1. Thinking about a developing country like China, how to monitor poor areas.
+
+### Dynamic monitoring
+- Urban expansion -- Landsat ([Zhang et al,. 2018(https://link.springer.com/article/10.1007/s11769-018-0988-9)]).
+- Monitoring forests + illegal logging --Landsat (2000 to 2012).
+- Urban area mapping -- SAR, InSAR.
+- Multi-temporal land cover (or land use) mapping.
+- Urban green spaces --Landsat (medium res 17%),Sentinel, LiDAR, High spatial resolution, High + medium resolution......
+- The power plant construction schedule and the environmental impact of the construction actions are monitored dynamically.
+- Changes in the area of a large number of water bodies.
+- Melting state of glaciers and snow.
+
+### Feature identification
+- Damage detection.
+- Illegal constructions detection[Chen et al.2020](https://ieeexplore.ieee.org/document/9191992).
+A example from Shenzhen is that  since 2006, the dynamic monitoring work of satellite remote sensing within the ecological control line has been launched, using satellite remote sensing as an advanced technical means to dynamically monitor the city's construction behaviour located within the basic ecological control line.([News: Remote Sensing Monitoring of Unauthorized Construction in Shenzhen](http://www.taibo.cn/p/53))
+- Structured Outdoor Architecture Reconstruction [Zhang et al.2020](https://openaccess.thecvf.com/content_CVPR_2020/html/Zhang_Conv-MPN_Convolutional_Message_Passing_Neural_Network_for_Structured_Outdoor_Architecture_CVPR_2020_paper.html).
+
+### Disaster prevention and mitigation
+- Droughts -- Sentinel moisture index.
+- Forest fires -- Landsat TM 1984.
+- Earthquakes -- SAR, InSAR.
+- Urban flooding (lower backscatter coefficient)  -- SAR,InSAR.
+- Air pollution and LULC -- Sentinel-3 Sea and Land Surface Temperature, Sentinel-5 Precursor Major Air Pollutants.
+
 
 ## Application
 
-XXX
+
+### SDGs-1
+- Case country :China
+- Policy
+  - [SDGs-1: NO POVERTY, 2015](https://www.undp.org/sustainable-development-goals/no-poverty)
+  Content: End poverty in all forms and dimensions by 2030.
+  <img src="https://sdgs.un.org/sites/default/files/2022-07/SDG%20Report%202022_Goal%201%20infographic.png"/ width=700><br/>
+  (Source:[UN](https://sdgs.un.org/goals/goal1))
+  - [Targeted poverty-alleviation strategy, 2014](https://www.un.org/development/desa/dspd/wp-content/uploads/sites/22/2021/05/Xie_Presentation-Lunyu-XIE1.pdf)
+  Content: To apply scientific and effective procedures for precise identification, precise assistance and precise management of poverty alleviation targets in response to different poverty-stricken regional environments and the conditions of different poor farming households.
+  <img src="http://epaper.chinadaily.com.cn/images/202209/12/631e8c5ca3109375854cc026.png"/ width=700><br/>
+  (Source: [China Daily Global](http://epaper.chinadaily.com.cn/a/202209/12/WS631e8c5da3109375516ef209.html))
+
+- Overview<br/>
+Using socio-economic data and remote sensing data to assess the economic development of national poor counties based on predictive models.
+Firstly, in order to verify the rate of economic development in poor areas, the economic growth of more than five hundred poor counties is compared with the national growth rate; secondly, in order to study whether the gap between the rich and the poor has narrowed between regions, the trend of the change in economic differences between poor counties is compared. Providing an efficient and accurate means of assessing economic development on a large scale.
+
+<img src="https://www.researchgate.net/publication/346065182/figure/fig3/AS:984639615287298@1611767786371/Geographical-distribution-of-impoverished-counties-in-China-Source-Heilig-GK.ppm"/ width="700"><br/>
+(Geographical distribution of impoverished counties in China. Source:Heilig et al., 2006. Poverty Alleviation in China: A Lesson for the Developing World? )
+
+- Reference papers
+  - [Jean, Neal, et al., "Combining satellite imagery and machine learning to predict poverty."](https://www.science.org/doi/10.1126/science.aaf7894)
+  - [Yeh et al., "Using publicly available satellite imagery and deep learning to understand economic well-being in Africa."](https://www.nature.com/articles/s41467-020-16185-w)
+  - [Pokhriyal et al., "Combining disparate data sources for improved poverty prediction and mapping."](https://www.pnas.org/doi/abs/10.1073/pnas.1700319114)
+
+- Data
+  - Google satellite imagery (from Google Earth)
+  - Sentinel
+  - LAI(Leaf Area Index)
+  - Vector county Boundaries
+  - Economic Development Data like GDP and TRSCG
+  - Census data count by county
+  
+- Time frame<br/>
+  Targeted poverty-alleviation strategy was published in 2014, We can choose two time ranges, 2018-2013 and 2014-2022, before and after the policy was released.
+
+- Unit frame<br/>
+  529 national poverty counties.
+
+- Work frame
+  - Using Google satellite imagery data, Sentinel, and LAI, to get extraction of data from farmland, built-up areas of towns, rivers and roads.
+  - Using deep learning models to obtain MDI.
+  - Comparing the economic changes in poor counties before and after the implementation of the Targeted poverty-alleviation strategy.
+
 
 ## Reflection
 
-XXX
+The important role of science and technology in contributing to the achievement of the UN Sustainable Development Goals (SDGs) has become an international consensus. EO data has made an important contribution as a scientific and technological tool to support the implementation of the 2030 Agenda and to the technology facilitation mechanism to support the achievement of the Sustainable Development Goals.
+
+- Chinese experiences supporting SDG<br/>
+"China's efforts in the application of EO Data for the SDGs may be of interest to a number of other developing countries, especially those lacking technical capacity," the report says, noting that research into the use of EO Data for the SDGs is an important contribution by China to the 2030 Agenda for Sustainable Development.<br/>
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/BigEarthData.png?raw=true"/ width=700><br/>
+(The technological systems of the Big Earth Data science
+. Source:[Big Earth Data in Support of the Sustainable Development Goals,2021](https://www.fmprc.gov.cn/mfa_eng/topics_665678/2030kcxfzyc/202109/P020211019152777729038.pdf))
+
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/SDGROADMAP.png?raw=true"/ width=700><br/>
+(Big Earth Data Supporting SDG Roadmap
+. Source:[Big Earth Data in Support of the Sustainable Development Goals,2021](https://www.fmprc.gov.cn/mfa_eng/topics_665678/2030kcxfzyc/202109/P020211019152777729038.pdf))
+<img src="http://newsletter.cas.cn/wap/International_Cooperation/201911/W020191101521396891779.png"/ width=700><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
