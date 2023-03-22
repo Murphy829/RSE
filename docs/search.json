@@ -158,7 +158,7 @@
     "href": "5+Google+Earth+Engine.html#summary",
     "title": "5  Google Earth Engine",
     "section": "5.1 Summary",
-    "text": "5.1 Summary\nThis week"
+    "text": "5.1 Summary\nThis week is an introductory course to the Google Earth Engine (GEE), introducing GEE from its setup and functionality.\nGEE is a powerful tool to help people understand the relationship between people and nature at a large scale, with all the Landsat, Sentinel and MODIS remote sensing data stored on GEE, and all the major remote sensing analysis algorithms integrated, and Google provides significant free computing power for users to analyse and process this data.\nIf remote sensing technology has made it possible to analyse the Earth, then the GEE remote sensing big data platform has made it feasible.\nHere are some useful tutorials resources for beginners.You can also find more advanced tutorials recommended in the ⚔️Practical link.\n\nWelcome to Google Earth Engine\nGee-turtorials\nCloud-Based Remote Sensing with Google Earth Engine"
   },
   {
     "objectID": "5+Google+Earth+Engine.html#application",
