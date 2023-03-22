@@ -17,7 +17,7 @@ SAR (Synthetic Aperture Radar) satellite is a kind of active earth observation s
 <img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/SAR.jpg?raw=true"/ width=300><br/>
 (The first SAR satellite - Seasat-A: born on 27 June 1978, developed by NASA, the US National Space Agency. Source: NASA)
 
-*Useful resources: a comprehensive and systematic introduction to SAR.
+*Useful resources: a comprehensive and systematic introduction to SAR.[Daniel, 2020](https://medium.com/the-downlinq/sar-101-an-introduction-to-synthetic-aperture-radar-2f0b6246c4a0)
 ```{=html}
 <iframe width="700" height="400" src="https://medium.com/the-downlinq/sar-101-an-introduction-to-synthetic-aperture-radar-2f0b6246c4a0" title="SAR 101: An Introduction to Synthetic Aperture Radar"></iframe>
 ```
