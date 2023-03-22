@@ -10,23 +10,100 @@ title: "Google Earth Engine"
 
 ## Summary
 
-This week is an introductory course to the [Google Earth Engine (GEE)](https://code.earthengine.google.com/), introducing GEE from its setup and functionality.
+This week is an introductory course to the [Google Earth Engine (GEE)](https://earthengine.google.com/), [GEE Code Editor website](https://code.earthengine.google.com/), introducing GEE from its setup and functionality.
 
 GEE is a powerful tool to help people understand the relationship between people and nature at a large scale, with all the Landsat, Sentinel and MODIS remote sensing data stored on GEE, and all the major remote sensing analysis algorithms integrated, and Google provides significant free computing power for users to analyse and process this data.
 
 If remote sensing technology has made it possible to analyse the Earth, then the GEE remote sensing big data platform has made it feasible.
 
-Here are some useful tutorials resources for beginners.You can also find more advanced tutorials recommended in the  [⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/5_GEE_I.html).<br/>
+Here are some useful tutorials resources for beginners. You can also find more advanced tutorials recommended in the  [⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/5_GEE_I.html).<br/>
 
 - [GEE Guides](https://developers.google.com/earth-engine/guides)<br/>
 - [Welcome to Google Earth Engine](https://developers.google.com/earth-engine)<br/>
 - [Gee-turtorials](https://google-earth-engine.com/)<br/>
 - [Cloud-Based Remote Sensing with Google Earth Engine](https://docs.google.com/document/d/1MIPIFMJakC6eNGOhlkXLcwjUKFyY6QJLHElzBCOfyn4/edit#heading=h.mm0ckpr9chy2)
 
+### Basics
+
+```{=html}
+<iframe width="700" height="500" src="https://docs.google.com/presentation/d/1hT9q6kWigM1MM3p7IEcvNQlpPvkedW-lgCCrIqbNeis/edit#slide=id.g4e98c855a5_0_3783" title="Introduction from GEE team"></iframe>
+```
+
+
+(A great introduction from GEE team [Nick Clinton](https://docs.google.com/presentation/d/1hT9q6kWigM1MM3p7IEcvNQlpPvkedW-lgCCrIqbNeis/edit#slide=id.g4e98c855a5_0_3783))
+
+#### What is Google Earth Engine (GEE)?
+Earth Engine is a platform for scientific analysis and visualization of geospatial datasets, for academic, non-profit, business and government users.
+
+Earth Engine hosts satellite imagery and stores it in a public data archive that includes historical earth images going back more than forty years. The images, ingested on a daily basis, are then made available for global-scale data mining.
+
+Earth Engine also provides APIs and other tools to enable the analysis of large datasets.(Source:[earthengine](https://earthengine.google.com/faq/))
+
+GEE's philosophy includes that “Often it turns out to be more efficient to move the questions than to move the data.”, "Allowing scientists to focus more on scientific questions rather than spending their energy on downloading and managing massive amounts of data."
+
+#### Advantages of GEE
+
+
+- Over 900+ geospatial datasets to choose from, supporting planetary-scale data science.
+
+
+Google Earth Engine's data archive contains more than **40 years** of historical imagery and scientific datasets, updated and expanded daily.It contains over **70 petabytes** of geospatial datasets (including **Landsat, Sentinel, and MODIS**) that you can access quickly and easily in Earth Blox's drag-and-drop, no-code interface. Not sure what dataset to use? No worries. We will help you find the right one for your analysis.(Source: [Google Earth Engine](https://earthengine.google.com/datasets/),[Google Earth Engine API](https://explorer.earthengine.google.com/#index))
+
+<img src ="https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2013/76fuygfd.gif"/ width=700><br/>
+(Source: Forest loss in Sumatra’s Riau province, Indonesia, 2000-2012. Credit: Hansen, Potapov, Moore, Hancher et al., 2013)
+
+- Faster analyses with cloud processing.
+
+Earth Engine runs on Google Cloud, giving you access to high-performance computing, even from a mobile device. And since it is cloud-based, you don’t need a high internet bandwidth as you won’t be downloading large files. This is especially useful for analysts working in countries with poor or unstable internet connectivity.
+
+<img src="https://www.researchgate.net/profile/Gregory-Giuliani/publication/317031370/figure/fig4/AS:614142339739676@1523434352995/Google-Earth-Engine-a-public-data-catalog-b-on-demand-and-c-batch-computation.png"/ width=700/><br/>
+
+- Upload your own data.
+
+You can upload your own raster and vector data to the platform. You can also recommend datasets from the Javascript API Code Editor window by going the Help button on the top right and selecting Suggest a dataset.
+
+
+#### disdvantages of GEE
+
+- There are several limitations on the use of datasets in GEE.
+
+e.g., the data sets stored in GEE are not comprehensive (such as complex SAR is not included).
+
+- There is a limit to the amount of user-uploaded data that can be stored. 
+
+- Requires JavaScript and Python coding skills.
+
+- Complex pricing.
+
+Google provides two pricing options. The first is based on the consumption of Earth Engine resources (compute units and storage) and the second is a monthly subscription fee based on the number of user seats with consumption limits. 
+
+*(The basics of GEE operation useful for me are covered in the opening mindmap and will not be summarised in text.)*
+
 ## Application
 
-XXX
+Useing “Google Earth Engine” as keywords to retrieve relevant articles and review articles from the Web of Science [WoS](https://www.webofscience.com/ ) core collection, including the SCIE (Science Citation Index Expanded) and SSCI (Social Sciences Citation Index), dated up to January 2021. After screening, 565 articles related to “Google Earth Engine” were obtained.(Source:[Application of Google Earth Engine](https://encyclopedia.pub/entry/14783))
+
+
+- Research disciplines in which GEE.
+
+The research areas with more than 100 publications were environmental sciences and ecology (365), remote sensing (363), and imaging science and photographic technology (129). These three research areas alone accounted for 70% of the total.
+<img src="https://encyclopedia.pub/media/common/202109/imagetools2-6155273197443.png"/ width=700/><br/>
+(Source:[Zhao et al., 2021. Progress and Trends in the Application of Google Earth and Google Earth Engine](https://www.mdpi.com/2072-4292/13/18/3778))
+
+
+- Keywords related to GEE
+
+It can be seen that the most frequently occurring keywords include “Water”, “High Resolution”, “Management”, “Random Forest”, “Algorithm”, “Cloud Platform”, and “Model”.
+<img src="https://encyclopedia.pub/media/item_content/202109/gee_figure3-61552848226d9.png"/ width=700/><br/>
+(Source:[Zhao et al., 2021. Progress and Trends in the Application of Google Earth and Google Earth Engine](https://www.mdpi.com/2072-4292/13/18/3778))
+
+- The worldwide distribution of study regions and their corresponding areas.
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0924271620300927-gr5.jpg"/ width=700><br/>
+[Tamiminia et al.,2020. Google Earth Engine for geo-big data applications: A meta-analysis and systematic review](https://www.sciencedirect.com/science/article/pii/S0924271620300927)
 
 ## Reflection
 
-XXX
+Through its two values: cloud platform and super computing power, GEE enables the analysis of remote sensing data from complex to simple, from regional to global, from short time to long time series, so that in the future the processing and mining of remote sensing big data can be done not only by professional remote sensing people, but also by environmentalists, economists, sociologists and even ordinary people from the earth observation data of human beings for nearly half a century. 
+
+With the help of ChatGPT, the code barrier will no longer exist. The future of remote sensing is not only for professional remote sensing people, but also for environmentalists, economists, sociologists and even ordinary people to analyse global problems and help find solutions from the Earth observation data of the last half century.Reminds me of GOOGLE'S MISSION STATEMENT "Our mission is to organise the world’s information and make it universally accessible and useful."
