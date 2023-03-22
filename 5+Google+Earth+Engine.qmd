@@ -26,9 +26,9 @@ Here are some useful tutorials resources for beginners. You can also find more a
 ### Basics
 
 ```{=html}
-<iframe width="700" height="500" src="https://docs.google.com/presentation/d/1hT9q6kWigM1MM3p7IEcvNQlpPvkedW-lgCCrIqbNeis/edit#slide=id.g4e98c855a5_0_3783" title="Introduction from GEE team"></iframe>
+<iframe width="700" height="500" src="https://docs.google.com/presentation/d/1hT9q6kWigM1MM3p7IEcvNQlpPvkedW-lgCCrIqbNeis/edit#slide=id.p" title="Introduction from GEE team"></iframe>
 ```
-(A great introduction from GEE team [Nick Clinton](https://docs.google.com/presentation/d/1hT9q6kWigM1MM3p7IEcvNQlpPvkedW-lgCCrIqbNeis/edit#slide=id.g4e98c855a5_0_3783))
+(A great introduction from GEE team [Nick Clinton](https://docs.google.com/presentation/d/1hT9q6kWigM1MM3p7IEcvNQlpPvkedW-lgCCrIqbNeis/edit#slide=id.p))
 
 #### What is Google Earth Engine (GEE)?
 
