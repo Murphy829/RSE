@@ -176,8 +176,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#classification-and-regression-tree-cart" id="toc-classification-and-regression-tree-cart" class="nav-link" data-scroll-target="#classification-and-regression-tree-cart"><span class="toc-section-number">6.1.1</span>  Classification and regression tree (CART)</a></li>
   <li><a href="#random-forest" id="toc-random-forest" class="nav-link" data-scroll-target="#random-forest"><span class="toc-section-number">6.1.2</span>  Random forest</a></li>
   <li><a href="#support-vector-machine-svm" id="toc-support-vector-machine-svm" class="nav-link" data-scroll-target="#support-vector-machine-svm"><span class="toc-section-number">6.1.3</span>  Support Vector Machine (SVM)</a></li>
+  <li><a href="#the-3-main-types-of-image-classification-techniques-in-remote-sensing" id="toc-the-3-main-types-of-image-classification-techniques-in-remote-sensing" class="nav-link" data-scroll-target="#the-3-main-types-of-image-classification-techniques-in-remote-sensing"><span class="toc-section-number">6.1.4</span>  The 3 main types of image classification techniques in remote sensing</a></li>
   </ul></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">6.2</span>  Application</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">6.2</span>  Application</a>
+  <ul class="collapse">
+  <li><a href="#supervised" id="toc-supervised" class="nav-link" data-scroll-target="#supervised"><span class="toc-section-number">6.2.1</span>  Supervised</a></li>
+  <li><a href="#unsupervised" id="toc-unsupervised" class="nav-link" data-scroll-target="#unsupervised"><span class="toc-section-number">6.2.2</span>  Unsupervised</a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">6.3</span>  Reflection</a></li>
   </ul>
 </nav>
@@ -229,6 +234,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="random-forest" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="random-forest"><span class="header-section-number">6.1.2</span> Random forest</h3>
 <p>CART decision trees are more prone to overfitting, and random forests can solve this problem to some extent. The main idea of random forest is to use randomness to generate a series of simple decision trees and combine their predictions into a final result.</p>
+<p>The RF classifier is an ensemble classifier that uses a set of CARTs to make a prediction (<a href="https://link.springer.com/article/10.1023/a:1010933404324">Breiman, 2001</a>).The trees are created by drawing a subset of training samples through replacement (a bagging approach). This means that the same sample can be selected several times, while others may not be selected at all (<a href="https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050">Belgiu, 2016</a>). <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0924271616000265-gr1.jpg" width="700"><br> (The random forest classifier.Source: <a href="https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050">Belgiu, 2016</a>)</p>
 </section>
 <section id="support-vector-machine-svm" class="level3" data-number="6.1.3">
 <h3 data-number="6.1.3" class="anchored" data-anchor-id="support-vector-machine-svm"><span class="header-section-number">6.1.3</span> Support Vector Machine (SVM)</h3>
@@ -249,14 +255,62 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>(Source: <a href="https://scikit-learn.org/stable/modules/svm.html">scikit-learn</a>)</p>
 </section>
+<section id="the-3-main-types-of-image-classification-techniques-in-remote-sensing" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="the-3-main-types-of-image-classification-techniques-in-remote-sensing"><span class="header-section-number">6.1.4</span> The 3 main types of image classification techniques in remote sensing</h3>
+<p>Unsupervised and supervised image classification are the two most common approaches.However, object-based classification has gained more popularity because it’s useful for high-resolution data.</p>
+<p><img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classifiation-infographic.png" width="500"><br> (Source:<a href="https://gisgeography.com/image-classification-techniques-remote-sensing/#remote-sensing-data-trends">IMAGE CLASSIFICATION IN REMOTE SENSING. 2022</a>)</p>
+</section>
 </section>
 <section id="application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
-<p>XXX</p>
+<section id="supervised" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="supervised"><span class="header-section-number">6.2.1</span> Supervised</h3>
+<section id="random-forest-classifier" class="level4" data-number="6.2.1.1">
+<h4 data-number="6.2.1.1" class="anchored" data-anchor-id="random-forest-classifier"><span class="header-section-number">6.2.1.1</span> Random forest classifier</h4>
+<ul>
+<li>Land cover classifiction</li>
+</ul>
+<p>Based on the classifications of six Landsat TM and HJ-1A/B remotely sensed space-borne optical satellite image mosaics with a superior random forest decision tree ensemble classifier, a total increase in urban land of about 28,000 km2 could be detected alongside a simultaneous decrease in natural land cover classes and cropland. (<a href="https://www.sciencedirect.com/science/article/pii/S0303243413001803">Haas &amp; Ban, 2013</a>)</p>
+<p><img src="https://ars.els-cdn.com/content/image/1-s2.0-S0303243413001803-gr5.jpg" width="500"><br> (Detailed excerpts from the classifications (right column) and their respective areas in FCC images in the left. The six rows show the following areas in descending order: Beijing 1990, Beijing 2010, Shanghai 1990, Shanghai 2010, Shenzhen 1990 and Shenzhen 2010.<a href="https://www.sciencedirect.com/science/article/pii/S0303243413001803">Haas &amp; Ban, 2013</a> )</p>
+<ul>
+<li>Classify urban impervious surfaces</li>
+</ul>
+<p>Classify urban impervious surfaces from single-date MODIS data.(<a href="https://www.sciencedirect.com/science/article/pii/S0924271613002116">Deng and Wu, 2013</a>)</p>
+<ul>
+<li>Map boreal forest habitats</li>
+</ul>
+<p>Using WorldView-2 imagery to map boreal forest habitats.(<a href="https://www.tandfonline.com/doi/full/10.1080/01431161.2013.845318">Räsänen et al., 2013</a>)</p>
+<ul>
+<li>Map tree canopy cover and biomass</li>
+</ul>
+<p>Using uni-temporal and multi-temporal Landsat 8 imagery to map tree canopy cover and biomass.(<a href="https://www.mdpi.com/2072-4292/7/8/10017">Karlson et al., 2015</a>)</p>
+</section>
+<section id="svms" class="level4" data-number="6.2.1.2">
+<h4 data-number="6.2.1.2" class="anchored" data-anchor-id="svms"><span class="header-section-number">6.2.1.2</span> SVMs</h4>
+<ul>
+<li>Biophysical tasks</li>
+</ul>
+<p>SVMs have been used in remote sensing-based estimation and monitoring of biophysical parameters such as chlorophyll concentration, gross primary product, and evapotranspiration.(<a href="https://ieeexplore.ieee.org/document/1260622">Kwiatkowska and Fargion (2003)</a>)</p>
+<ul>
+<li>Land cover land use tasks</li>
+</ul>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S092427160700055X">Inglada (2007)</a> implemented SVMs to classify man-made features (e.g., bridges, roads, roundabouts) from 2.5 m SPOT 5 imagery. <img src="https://ars.els-cdn.com/content/image/1-s2.0-S092427160700055X-gr2.jpg" width="700"><br> (An example of the kind of extraction which can be obtained.<a href="https://www.sciencedirect.com/science/article/pii/S092427160700055X">Inglada (2007)</a> )</p>
+</section>
+</section>
+<section id="unsupervised" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="unsupervised"><span class="header-section-number">6.2.2</span> Unsupervised</h3>
+<ul>
+<li>Land cover classifiction</li>
+</ul>
+<p><a href="https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf">Mañas et al., 2021</a> obtain pairs of images from the same location at different times, and then sample about 1 million Sentinel-2 image patches around the most populated cities. They map images to multiple embedding sub-spaces, and for each sub-space we optimize a different contrastive loss that encourages a different set of invariances (e.g., to temporal or synthetic augmentations). After training, the shared backbone produces a common representation that captures the different factors of variation.</p>
+<p><img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco.png?raw=true" width="700"><br> (Seasonal Contrast (SeCo), Source:<a href="https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf">Mañas et al., 2021</a>)</p>
+<p>Task: multi-label land-cover classification.<br> Metric: mean average precision.<br> <img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco2.png?raw=true" width="700"><br> (Land-cover classification on BigEarthNet, Source:<a href="https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf">Mañas et al., 2021</a>)</p>
+</section>
 </section>
 <section id="reflection" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>XXX</p>
+<p>With the increasing spatial and temporal resolution of Earth observation by remote sensing satellite constellations, massive amounts of data are being generated every day, and machine learning has become the way to go in order to quickly obtain information and quantify data from these images.</p>
+<p>But the statistics and maths involved made it difficult for me to get to grips with it at short notice. Perhaps I should start with the classification tools integrated in Arcmap. <img src="https://desktop.arcgis.com/en/arcmap/10.7/extensions/spatial-analyst/image-classification/GUID-2F126DFC-49A7-4C61-ADF5-C6BEEC5EDD7F-web.png" width="700"><br> <a href="https://desktop.arcgis.com/en/arcmap/latest/extensions/spatial-analyst/image-classification/what-is-image-classification-.htm">What is image classification. Source: ArcMap</a></p>
 
 
 </section>

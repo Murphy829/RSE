@@ -46,6 +46,12 @@ Useful information extraction from EO data has long been a scientific challenge 
 
 CART decision trees are more prone to overfitting, and random forests can solve this problem to some extent. The main idea of random forest is to use randomness to generate a series of simple decision trees and combine their predictions into a final result.
 
+
+The RF classifier is an ensemble classifier that uses a set of CARTs to make a prediction ([Breiman, 2001](https://link.springer.com/article/10.1023/a:1010933404324)).The trees are created by drawing a subset of training samples through replacement (a bagging approach). This means that the same sample can be selected several times, while others may not be selected at all ([Belgiu, 2016](https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050)).
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0924271616000265-gr1.jpg"/ width=700><br/>
+(The random forest classifier.Source: [Belgiu, 2016](https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050))
+
+
 ### Support Vector Machine (SVM)
 
 - Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection. (SVM is one of the best classification algorithms.([Pal & Mather. 2006](https://www.tandfonline.com/doi/full/10.1080/01431160512331314083)))
@@ -70,13 +76,74 @@ CART decision trees are more prone to overfitting, and random forests can solve 
 (Source: [scikit-learn](https://scikit-learn.org/stable/modules/svm.html))
 
 
+### The 3 main types of image classification techniques in remote sensing
+Unsupervised and supervised image classification are the two most common approaches.However, object-based classification has gained more popularity because it’s useful for high-resolution data.
 
+<img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classifiation-infographic.png"/ width=500><br/>
+(Source:[IMAGE CLASSIFICATION IN REMOTE SENSING. 2022](https://gisgeography.com/image-classification-techniques-remote-sensing/#remote-sensing-data-trends))
 
 
 ## Application
 
-XXX
+### Supervised
+
+#### Random forest classifier
+
+- Land cover classifiction
+
+Based on the classifications of six Landsat TM and HJ-1A/B remotely sensed space-borne optical satellite image mosaics with a superior random forest decision tree ensemble classifier, a total increase in urban land of about 28,000 km2 could be detected alongside a simultaneous decrease in natural land cover classes and cropland. ([Haas & Ban, 2013](https://www.sciencedirect.com/science/article/pii/S0303243413001803)) 
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0303243413001803-gr5.jpg"/ width=500><br/>
+(Detailed excerpts from the classifications (right column) and their respective areas in FCC images in the left. The six rows show the following areas in descending order: Beijing 1990, Beijing 2010, Shanghai 1990, Shanghai 2010, Shenzhen 1990 and Shenzhen 2010.[Haas & Ban, 2013](https://www.sciencedirect.com/science/article/pii/S0303243413001803) )
+
+
+- Classify urban impervious surfaces
+
+Classify urban impervious surfaces from single-date MODIS data.([Deng and Wu, 2013](https://www.sciencedirect.com/science/article/pii/S0924271613002116))
+  
+- Map boreal forest habitats 
+
+Using WorldView-2 imagery to map boreal forest habitats.([Räsänen et al., 2013](https://www.tandfonline.com/doi/full/10.1080/01431161.2013.845318))
+
+- Map tree canopy cover and biomass 
+
+Using uni-temporal and multi-temporal Landsat 8 imagery to map tree canopy cover and biomass.([Karlson et al., 2015](https://www.mdpi.com/2072-4292/7/8/10017))
+
+#### SVMs
+
+- Biophysical tasks
+
+SVMs have been used in remote sensing-based estimation and monitoring of biophysical parameters such as chlorophyll concentration, gross primary product, and evapotranspiration.([Kwiatkowska and Fargion (2003)](https://ieeexplore.ieee.org/document/1260622))
+
+
+- Land cover land use tasks
+
+[Inglada (2007)](https://www.sciencedirect.com/science/article/pii/S092427160700055X)  implemented SVMs to classify man-made features (e.g., bridges, roads, roundabouts) from 2.5 m SPOT 5 imagery.
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S092427160700055X-gr2.jpg"/ width=700><br/>
+(An example of the kind of extraction which can be obtained.[Inglada (2007)](https://www.sciencedirect.com/science/article/pii/S092427160700055X) )
+
+### Unsupervised
+
+- Land cover classifiction
+
+[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf) obtain pairs of images from the same location at 
+different times, and then sample about 1 million Sentinel-2 image patches around the most 
+populated cities. They map images to multiple embedding sub-spaces, and for each sub-space we optimize a different contrastive loss that encourages a different set of invariances (e.g., to temporal or synthetic augmentations). After training, the shared backbone produces a common representation that captures the different factors of variation.
+
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco.png?raw=true"/ width=700><br/>
+(Seasonal Contrast (SeCo), Source:[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf))
+
+
+Task: multi-label land-cover classification.<br/>
+Metric: mean average precision.<br/>
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco2.png?raw=true"/ width=700><br/>
+(Land-cover classification on BigEarthNet, Source:[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf))
+
 
 ## Reflection
 
-XXX
+With the increasing spatial and temporal resolution of Earth observation by remote sensing satellite constellations, massive amounts of data are being generated every day, and machine learning has become the way to go in order to quickly obtain information and quantify data from these images.
+
+But the statistics and maths involved made it difficult for me to get to grips with it at short notice. Perhaps I should start with the classification tools integrated in Arcmap.
+<img src ="https://desktop.arcgis.com/en/arcmap/10.7/extensions/spatial-analyst/image-classification/GUID-2F126DFC-49A7-4C61-ADF5-C6BEEC5EDD7F-web.png"/ width=700><br/>
+[What is image classification. Source: ArcMap](https://desktop.arcgis.com/en/arcmap/latest/extensions/spatial-analyst/image-classification/what-is-image-classification-.htm)
