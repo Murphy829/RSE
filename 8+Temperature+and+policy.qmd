@@ -4,9 +4,7 @@ title: "Temperature and policy"
 #editor: visual
 ---
 
-[🛡Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-8/#1)<br/> 
-[⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/8_temperature.html)<br/>
-
+[🛡Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-8/#1)<br/> [⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/8_temperature.html)<br/>
 
 <img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/8%2BTemperature%2Band%2Bpolicy.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
 
