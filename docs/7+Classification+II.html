@@ -166,7 +166,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="toc-section-number">7.1.1</span>  Object-Based Image Analysis (OBIA)</a></li>
+  <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="toc-section-number">7.1.2</span>  Sub pixel analysis</a></li>
+  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="toc-section-number">7.1.3</span>  Accuracy assessment</a></li>
+  </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">7.2</span>  Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">7.3</span>  Reflection</a></li>
   </ul>
@@ -192,10 +197,43 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><a href="https://andrewmaclachlan.github.io/CASA0023-lecture-7/#1">🛡️Lecture link</a><br> <a href="https://andrewmaclachlan.github.io/CASA0023/7_classification_II.html">⚔️Practical link</a><br></p>
-<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/e5a083ef9bbf5ec919cc052fe94f44b95497079d/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
+<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/ddf9b52819498427947684d839ff1feac10bd649/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
-<p>This week</p>
+<p>This week introduces a third image classification algorithm, Object-Based Image Analysis (OBIA), and how to determine the accuracy of the results against the classification.</p>
+<section id="object-based-image-analysis-obia" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">7.1.1</span> Object-Based Image Analysis (OBIA)</h3>
+<p><img src="https://gisgeography.com/wp-content/uploads/2017/05/OBIA-segmentation-850x370.png" width="700"><br> (Object-Based Image Analysis (OBIA) segmentation is a process that groups similar pixels into objects, Source:<a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">GISGeography</a>)</p>
+<p><img src="https://gisgeography.com/wp-content/uploads/2017/06/OBIA-classification1-1-850x370.png" width="700"><br> (OBIA classification uses shape, size, and spectral properties of objects to classify each object, Source:<a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">GISGeography</a>)</p>
+<ul>
+<li><p>Instead of considering cells we consider shapes based on the similarity (homogeneity) or difference (heterogeneity) of the cells = superpixels</p></li>
+<li><p>OBIA classifies images into vector objects based on geometry, area, colour, shape, texture, proximity and other elements. This segmentation model is closer to the way human vision works and can overcome some of the problems associated with the traditional image model of pixel-based target classification, such as the “salt-and-pepper effect”.</p></li>
+</ul>
+<p>*“salt-and-pepper effect” is caused by high local spatial heterogeneity between neighboring pixels.(<a href="https://www.researchgate.net/figure/Example-of-the-speckle-or-the-salt-and-pepper-effect-common-to-pixel-based_fig1_236334092">Kelly et al., 2011</a>)</p>
+<ul>
+<li>OBIA consists of two major stages:
+<ul>
+<li>Segmentation - partition of space to identify homogeneous objects</li>
+<li>Classification - classification of the obtained objects</li>
+</ul></li>
+</ul>
+<p><a href="https://jakubnowosad.com/ogh2021/#1">Jakub Nowosad, 2021. Spatial segmentation in R using the supercells package</a></p>
+<iframe width="700" height="500" src="https://jakubnowosad.com/ogh2021/#1" title="Spatial segmentation in R
+using the supercells package"></iframe>
+</section>
+<section id="sub-pixel-analysis" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">7.1.2</span> Sub pixel analysis</h3>
+<ul>
+<li>Termed (all the same): Sub pixel classification, Spectral Mixture Analysis (SMA), Linear spectral unmixing. SMA determines the proportion or abundance of landcover per pixel<br></li>
+</ul>
+<p><img src="https://www.researchgate.net/profile/Reinaldo-Perez-Machado/publication/259715697/figure/fig6/AS:667126004215814@1536066642302/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed.png" width="700"><br> (Perfect decomposition with a Linear Spectral Mixture Model (LSMM) on a 30 m pixel formed by a mixture of 3 components: vegetation, water and soil. On this case the residual is zero., Source:<a href="https://www.researchgate.net/figure/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed_fig6_259715697">Machado and Small (2013) 2017</a>)</p>
+</section>
+<section id="accuracy-assessment" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">7.1.3</span> Accuracy assessment</h3>
+<ul>
+<li></li>
+</ul>
+</section>
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>

@@ -6,11 +6,57 @@ title: "Classification II"
 
 [🛡️Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-7/#1)<br/> [⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/7_classification_II.html)<br/>
 
-<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/e5a083ef9bbf5ec919cc052fe94f44b95497079d/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
+<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/ddf9b52819498427947684d839ff1feac10bd649/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
 
 ## Summary
 
-This week
+This week introduces a third image classification algorithm, Object-Based Image Analysis (OBIA), and how to determine the accuracy of the results against the classification.
+
+
+### Object-Based Image Analysis (OBIA)
+
+
+
+<img src="https://gisgeography.com/wp-content/uploads/2017/05/OBIA-segmentation-850x370.png"/ width=700><br/>
+(Object-Based Image Analysis (OBIA) segmentation is a process that groups similar pixels into objects, Source:[GISGeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/))
+
+<img src="https://gisgeography.com/wp-content/uploads/2017/06/OBIA-classification1-1-850x370.png"/ width=700><br/>
+(OBIA classification uses shape, size, and spectral properties of objects to classify each object, Source:[GISGeography](https://gisgeography.com/obia-object-based-image-analysis-geobia/))
+
+- Instead of considering cells we consider shapes based on the similarity (homogeneity) or difference (heterogeneity) of the cells = superpixels
+
+- OBIA classifies images into vector objects based on geometry, area, colour, shape, texture, proximity and other elements. This segmentation model is closer to the way human vision works and can overcome some of the problems associated with the traditional image model of pixel-based target classification, such as the "salt-and-pepper effect".
+
+*"salt-and-pepper effect" is caused by high local spatial heterogeneity between neighboring pixels.([Kelly et al., 2011](https://www.researchgate.net/figure/Example-of-the-speckle-or-the-salt-and-pepper-effect-common-to-pixel-based_fig1_236334092))
+
+- OBIA consists of two major stages:
+  - Segmentation - partition of space to identify homogeneous objects
+  - Classification - classification of the obtained objects
+
+[Jakub Nowosad, 2021. Spatial segmentation in R
+using the supercells package](https://jakubnowosad.com/ogh2021/#1)
+
+```{=html}
+<iframe width="700" height="500" src="https://jakubnowosad.com/ogh2021/#1" title="Spatial segmentation in R
+using the supercells package"></iframe>
+```
+
+
+### Sub pixel analysis
+
+- Termed (all the same): Sub pixel classification, Spectral Mixture Analysis (SMA), Linear spectral unmixing. SMA determines the proportion or abundance of landcover per pixel<br/>
+
+<img src="https://www.researchgate.net/profile/Reinaldo-Perez-Machado/publication/259715697/figure/fig6/AS:667126004215814@1536066642302/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed.png"/ width=700><br/>
+(Perfect decomposition with a Linear Spectral Mixture Model (LSMM) on a 30 m pixel formed by a mixture of 3 components: vegetation, water and soil. On this case the residual is zero., Source:[Machado and Small (2013) 2017](https://www.researchgate.net/figure/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed_fig6_259715697))
+
+
+### Accuracy assessment
+
+- 
+
+
+
+
 
 ## Application
 
