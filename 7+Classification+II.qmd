@@ -6,7 +6,7 @@ title: "Classification II"
 
 [🛡️Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-7/#1)<br/> [⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/7_classification_II.html)<br/>
 
-<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
+<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/e5a083ef9bbf5ec919cc052fe94f44b95497079d/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
 
 ## Summary
 
