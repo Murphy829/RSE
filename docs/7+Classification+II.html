@@ -171,6 +171,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="toc-section-number">7.1.1</span>  Object-Based Image Analysis (OBIA)</a></li>
   <li><a href="#sub-pixel-analysis" id="toc-sub-pixel-analysis" class="nav-link" data-scroll-target="#sub-pixel-analysis"><span class="toc-section-number">7.1.2</span>  Sub pixel analysis</a></li>
   <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="toc-section-number">7.1.3</span>  Accuracy assessment</a></li>
+  <li><a href="#remote-sensing-approach" id="toc-remote-sensing-approach" class="nav-link" data-scroll-target="#remote-sensing-approach"><span class="toc-section-number">7.1.4</span>  Remote sensing approach</a></li>
+  <li><a href="#spatial-autocorrelation" id="toc-spatial-autocorrelation" class="nav-link" data-scroll-target="#spatial-autocorrelation"><span class="toc-section-number">7.1.5</span>  spatial autocorrelation</a></li>
   </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">7.2</span>  Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">7.3</span>  Reflection</a></li>
@@ -197,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><a href="https://andrewmaclachlan.github.io/CASA0023-lecture-7/#1">🛡️Lecture link</a><br> <a href="https://andrewmaclachlan.github.io/CASA0023/7_classification_II.html">⚔️Practical link</a><br></p>
-<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/ddf9b52819498427947684d839ff1feac10bd649/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
+<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/aa347d29a18cf725c9d4d39b472651edd5d73028/imgs/mindmaps/7%2BClassification%2BII.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
 <section id="summary" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
 <p>This week introduces a third image classification algorithm, Object-Based Image Analysis (OBIA), and how to determine the accuracy of the results against the classification.</p>
@@ -226,22 +228,87 @@ using the supercells package"></iframe>
 <ul>
 <li>Termed (all the same): Sub pixel classification, Spectral Mixture Analysis (SMA), Linear spectral unmixing. SMA determines the proportion or abundance of landcover per pixel<br></li>
 </ul>
-<p><img src="https://www.researchgate.net/profile/Reinaldo-Perez-Machado/publication/259715697/figure/fig6/AS:667126004215814@1536066642302/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed.png" width="700"><br> (Perfect decomposition with a Linear Spectral Mixture Model (LSMM) on a 30 m pixel formed by a mixture of 3 components: vegetation, water and soil. On this case the residual is zero., Source:<a href="https://www.researchgate.net/figure/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed_fig6_259715697">Machado and Small (2013) 2017</a>)</p>
+<p><img src="https://www.researchgate.net/profile/Reinaldo-Perez-Machado/publication/259715697/figure/fig6/AS:667126004215814@1536066642302/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed.png" width="500"><br> (Perfect decomposition with a Linear Spectral Mixture Model (LSMM) on a 30 m pixel formed by a mixture of 3 components: vegetation, water and soil. On this case the residual is zero., Source:<a href="https://www.researchgate.net/figure/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed_fig6_259715697">Machado and Small (2013) 2017</a>)</p>
 </section>
 <section id="accuracy-assessment" class="level3" data-number="7.1.3">
 <h3 data-number="7.1.3" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">7.1.3</span> Accuracy assessment</h3>
 <ul>
-<li></li>
+<li>Confusion matrix <img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/CMARTIX.png?raw=true" width="500"><br> (Source:<a href="https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf">Barsi et al.&nbsp;2018 Accuracy Dimensions in Remote Sensing</a>)</li>
 </ul>
+<p><strong>There are many different ways to look at the thematic accuracy of a classification. The error matrix allows you calculate the following accuracy metrics:</strong></p>
+<p><img src="http://gsp.humboldt.edu/olm/Courses/GSP_216/images/error-matrix.png" width="500"><br></p>
+<ul>
+<li><strong>PA Producer accuracy</strong></li>
+</ul>
+<p>Producer’s Accuracy is the map accuracy from the point of view of the map maker (the producer). This is how often are real features on the ground correctly shown on the classified map or the probability that a certain land cover of an area on the ground is classified as such. The Producer’s Accuracy is complement of the Omission Error, Producer’s Accuracy = 100%-Omission Error. It is also the number of reference sites classified accurately divided by the total number of reference sites for that class.</p>
+<ul>
+<li><strong>UA User’s accuracy</strong></li>
+</ul>
+<p>The User’s Accuracy is the accuracy from the point of view of a map user, not the map maker. the User’s accuracy essentially tells use how often the class on the map will actually be present on the ground. This is referred to as reliability. The User’s Accuracy is complement of the Commission Error, User’s Accuracy = 100%-Commission Error. The User’s Accuracy is calculating by taking the total number of correct classifications for a particular class and dividing it by the row total.</p>
+<ul>
+<li><strong>OA the (overall) accuracy</strong></li>
+</ul>
+<p>Overall Accuracy is essentially tells us out of all of the reference sites what proportion were mapped correctly. The overall accuracy is usually expressed as a percent, with 100% accuracy being a perfect classification where all reference site were classified correctly. Overall accuracy is the easiest to calculate and understand but ultimately only provides the map user and producer with basic accuracy information.</p>
+<ul>
+<li>Errors of omission (100-producer’s accuracy)</li>
+</ul>
+<p>Errors of omission refer to reference sites that were left out (or omitted) from the correct class in the classified map. The real land cover type was left out or omitted from the classified map. Error of omission is sometime also referred to as a Type I error. An error of omission in one category will be counted as an error in commission in another category. Omission errors are calculated by reviewing the reference sites for incorrect classifications. This is done by going down the columns for each class and adding together the incorrect classifications and dividing them by the total number of reference sites for each class. A separate omission error is generally calculated for each class. This will allow us to evaluate the classification accuracy and error for each class.</p>
+<ul>
+<li>Errors of commission (100- user’s accuracy)</li>
+</ul>
+<p>Errors of omission are in relation to the classified results. These refer sites that are classified as to reference sites that were left out (or omitted) from the correct class in the classified map. Commission errors are calculated by reviewing the classified sites for incorrect classifications. This is done by going across the rows for each class and adding together the incorrect classifications and dividing them by the total number of classified sites for each class.</p>
+<ul>
+<li>Kappa coefficien: Designed to express the accuracy of an image compared to the results by chance</li>
+</ul>
+<p>The Kappa Coefficient is generated from a statistical test to evaluate the accuracy of a classification. Kappa essentially evaluate how well the classification performed as compared to just randomly assigning values, i.e.&nbsp;did the classification do better than random. The Kappa Coefficient can range from -1 t0 1. A value of 0 indicated that the classification is no better than a random classification. A negative number indicates the classification is significantly worse than random. A value close to 1 indicates that the classification is significantly better than random.</p>
+<p>(Source: <a href="http://gsp.humboldt.edu/olm/Courses/GSP_216/lessons/accuracy/metrics.html">humboldt</a>)</p>
+<ul>
+<li>F1-Score</li>
+</ul>
+<p>The F1-Score (or F Measure) combines both recall (Producer accuracy) and Precision (User accuracy).</p>
+<ul>
+<li>Receiver Operating Characteristic Curve (the ROC Curve)</li>
+</ul>
+</section>
+<section id="remote-sensing-approach" class="level3" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="remote-sensing-approach"><span class="header-section-number">7.1.4</span> Remote sensing approach</h3>
+<ul>
+<li><p>Same process for all:</p>
+<ul>
+<li>class definition</li>
+<li>pre-processing</li>
+<li>training</li>
+<li>pixel assignment</li>
+<li>accuracy assessment</li>
+</ul></li>
+</ul>
+</section>
+<section id="spatial-autocorrelation" class="level3" data-number="7.1.5">
+<h3 data-number="7.1.5" class="anchored" data-anchor-id="spatial-autocorrelation"><span class="header-section-number">7.1.5</span> spatial autocorrelation</h3>
+<ul>
+<li>Spatial cross validation
+<ul>
+<li><p>spatially partition the folded data, folds are from cross validation</p></li>
+<li><p>disjoint (no common boundary) using k -means clustering (number of points and a distance)</p></li>
+<li><p>same as cross validation but with clustering to the folds…</p></li>
+<li><p>stops our training data and testing data being near each other…</p></li>
+</ul></li>
+</ul>
+<p><img src="https://r.geocompx.org/figures/13_partitioning.png" width="700"><br> (Spatial visualization of selected test and training observations for cross-validation of one repetition. Random (upper row) and spatial partitioning (lower row). Source:<a href="https://r.geocompx.org/spatial-cv.html">Lovelace et al.&nbsp;2022</a>)</p>
 </section>
 </section>
 <section id="application" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="application"><span class="header-section-number">7.2</span> Application</h2>
-<p>XXX</p>
+<ul>
+<li>Urban Object-Based Classification</li>
+</ul>
+<p>Land-use/land-cover (LULC) information extraction is one of the main use cases of remote sensing imagery. The advent of sub-meter resolution data brought about the revolution of methods from pixel-based to object-based image analysis (OBIA) involving image segmentation. (Source: <a href="https://www.mdpi.com/2072-4292/9/4/358#">Grippa et al., 2017</a>)</p>
+<p><img src="https://pub.mdpi-res.com/remotesensing/remotesensing-09-00358/article_deploy/html/images/remotesensing-09-00358-ag.png?1569299358" width="700"><br></p>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>XXX</p>
+<p>These two weeks of learning about image classification and accuracy assessment, combined with the image correction and enhancement operations of the previous weeks, make up the complete remote sensing data classification process.</p>
+<p><img src="https://www.researchgate.net/publication/344052292/figure/fig1/AS:1083908439449624@1635435318887/Classification-process-of-remote-sensing-hyperspectral-images.jpg" width="700"> <br> (Classification process of remote-sensing hyperspectral images.<a href="https://www.hindawi.com/journals/cin/2020/8886932/">Li et al.,2020</a>)</p>
 
 
 </section>
