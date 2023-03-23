@@ -17,9 +17,9 @@ SAR (Synthetic Aperture Radar) satellite is a kind of active earth observation s
 <img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/SAR.jpg?raw=true"/ width=300><br/>
 (The first SAR satellite - Seasat-A: born on 27 June 1978, developed by NASA, the US National Space Agency. Source: NASA)
 
-*Useful resources: a comprehensive and systematic introduction to SAR.[Daniel, 2020](https://medium.com/the-downlinq/sar-101-an-introduction-to-synthetic-aperture-radar-2f0b6246c4a0)
+*Useful resources: a comprehensive and systematic introduction to SAR.([Daniel, 2020](https://medium.com/the-downlinq/sar-101-an-introduction-to-synthetic-aperture-radar-2f0b6246c4a0))
 ```{=html}
-<iframe width="700" height="400" src="https://medium.com/the-downlinq/sar-101-an-introduction-to-synthetic-aperture-radar-2f0b6246c4a0" title="SAR 101: An Introduction to Synthetic Aperture Radar"></iframe>
+<iframe width="700" height="400" src="https://medium.com/the-downlinq/sar-101-an-introduction-to-synthetic-aperture-radar-2f0b6246c4a0"></iframe>
 ```
 
 ### Advantage
@@ -50,4 +50,4 @@ Timeline of past, present and future SAR missions between 1991 and 2025, and the
 
 ## Reflection
 
-XXX
+Due to its powerful all-weather and high-resolution capabilities, SAR is used in disaster prevention, geological exploration, mapping and other fields. In the field of urban research, combined with China's urban governance needs, SAR can play an advantage in urban illegal land monitoring, urban physical assessment and analysis, urban high-speed dynamic supervision, etc., which will promote dynamic perception of urban operation.
