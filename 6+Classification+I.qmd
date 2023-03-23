@@ -10,78 +10,69 @@ editor: visual
 
 ## Summary
 
-“Image classification is the process of assigning land cover classes to pixels. For example, classes include water, urban, forest, agriculture, and grassland.”([GISGeography. 2022](https://gisgeography.com/image-classification-techniques-remote-sensing/))
+"Image classification is the process of assigning land cover classes to pixels. For example, classes include water, urban, forest, agriculture, and grassland."([GISGeography. 2022](https://gisgeography.com/image-classification-techniques-remote-sensing/))
 
-<img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classification-techniques-remote-sensing.jpg" / width =700><br/>
+<img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classification-techniques-remote-sensing.jpg" width="700"/><br/>
 
 Useful information extraction from EO data has long been a scientific challenge in remote sensing. Remote sensing image classification is one of the most fundamental problems in remote sensing data processing. With the increasing amount of remote sensing data at high spatial resolution, it is worthwhile to pay attention to and conduct research on how to integrate various information extraction techniques, integrate the results of multi-scale information extraction, and better extract quantitative information from various types of remote sensing data.
 
-
 ### Classification and regression tree (CART)
 
-- Classification trees: classify data into two or more discrete (can only have certain values) categories
+-   Classification trees: classify data into two or more discrete (can only have certain values) categories
 
-- Regression trees: predict continuous dependent variable
+-   Regression trees: predict continuous dependent variable
 
-- Gini Impurity: Gini Impurity is a measurement used to build Decision Trees to determine how the features of a dataset should split nodes to form the tree. More precisely, the Gini Impurity of a dataset is a number between 0-0.5, which indicates the likelihood of new, random data being misclassified if it were given a random class label according to the class distribution in the dataset.([Fatih Karabiber](https://www.learndatasci.com/glossary/gini-impurity/))
+-   Gini Impurity: Gini Impurity is a measurement used to build Decision Trees to determine how the features of a dataset should split nodes to form the tree. More precisely, the Gini Impurity of a dataset is a number between 0-0.5, which indicates the likelihood of new, random data being misclassified if it were given a random class label according to the class distribution in the dataset.([Fatih Karabiber](https://www.learndatasci.com/glossary/gini-impurity/))
 
-- Overfitting: Overfitting is a concept in data science, which occurs when a statistical model fits exactly against its training data. Low error rates and a high variance are good indicators of overfitting. In order to prevent this type of behavior, part of the training dataset is typically set aside as the “test set” to check for overfitting. If the training data has a low error rate and the test data has a high error rate, it signals overfitting.
+-   Overfitting: Overfitting is a concept in data science, which occurs when a statistical model fits exactly against its training data. Low error rates and a high variance are good indicators of overfitting. In order to prevent this type of behavior, part of the training dataset is typically set aside as the "test set" to check for overfitting. If the training data has a low error rate and the test data has a high error rate, it signals overfitting.
 
-  How to avoid overfitting ?
-  - Early stopping: As we mentioned earlier, this method seeks to pause training before the model starts learning the noise within the model. This approach risks halting the training process too soon, leading to the opposite problem of underfitting. Finding the “sweet spot” between underfitting and overfitting is the ultimate goal here.
-  
-  - Train with more data: Expanding the training set to include more data can increase the accuracy of the model by providing more opportunities to parse out the dominant relationship among the input and output variables. That said, this is a more effective method when clean, relevant data is injected into the model. Otherwise, you could just continue to add more complexity to the model, causing it to overfit.
-  
-  - Data augmentation: While it is better to inject clean, relevant data into your training data, sometimes noisy data is added to make a model more stable. However, this method should be done sparingly.
-  
-  - Feature selection: When you build a model, you’ll have a number of parameters or features that are used to predict a given outcome, but many times, these features can be redundant to others. Feature selection is the process of identifying the most important ones within the training data and then eliminating the irrelevant or redundant ones. This is commonly mistaken for dimensionality reduction, but it is different.  However, both methods help to simplify your model to establish the dominant trend in the data.
-  
-  - Regularization: If overfitting occurs when a model is too complex, it makes sense for us to reduce the number of features. But what if we don’t know which inputs to eliminate during the feature selection process? If we don’t know which features to remove from our model, regularization methods can be particularly helpful. Regularization applies a “penalty” to the input parameters with the larger coefficients, which subsequently limits the amount of variance in the model.  While there are a number of regularization methods, such as L1 regularization, Lasso regularization, and dropout, they all seek to identify and reduce the noise within the data.
-  
-  - Ensemble methods: Ensemble learning methods are made up of a set of classifiers—e.g. decision trees—and their predictions are aggregated to identify the most popular result. The most well-known ensemble methods are bagging and boosting. In bagging, a random sample of data in a training set is selected with replacement—meaning that the individual data points can be chosen more than once. After several data samples are generated, these models are then trained independently, and depending on the type of task—i.e. regression or classification—the average or majority of those predictions yield a more accurate estimate. This is commonly used to reduce variance within a noisy dataset.
-(Source: [IBM](https://www.ibm.com/topics/overfitting))
+    How to avoid overfitting ?
 
+    -   Early stopping: As we mentioned earlier, this method seeks to pause training before the model starts learning the noise within the model. This approach risks halting the training process too soon, leading to the opposite problem of underfitting. Finding the "sweet spot" between underfitting and overfitting is the ultimate goal here.
+
+    -   Train with more data: Expanding the training set to include more data can increase the accuracy of the model by providing more opportunities to parse out the dominant relationship among the input and output variables. That said, this is a more effective method when clean, relevant data is injected into the model. Otherwise, you could just continue to add more complexity to the model, causing it to overfit.
+
+    -   Data augmentation: While it is better to inject clean, relevant data into your training data, sometimes noisy data is added to make a model more stable. However, this method should be done sparingly.
+
+    -   Feature selection: When you build a model, you'll have a number of parameters or features that are used to predict a given outcome, but many times, these features can be redundant to others. Feature selection is the process of identifying the most important ones within the training data and then eliminating the irrelevant or redundant ones. This is commonly mistaken for dimensionality reduction, but it is different. However, both methods help to simplify your model to establish the dominant trend in the data.
+
+    -   Regularization: If overfitting occurs when a model is too complex, it makes sense for us to reduce the number of features. But what if we don't know which inputs to eliminate during the feature selection process? If we don't know which features to remove from our model, regularization methods can be particularly helpful. Regularization applies a "penalty" to the input parameters with the larger coefficients, which subsequently limits the amount of variance in the model. While there are a number of regularization methods, such as L1 regularization, Lasso regularization, and dropout, they all seek to identify and reduce the noise within the data.
+
+    -   Ensemble methods: Ensemble learning methods are made up of a set of classifiers---e.g. decision trees---and their predictions are aggregated to identify the most popular result. The most well-known ensemble methods are bagging and boosting. In bagging, a random sample of data in a training set is selected with replacement---meaning that the individual data points can be chosen more than once. After several data samples are generated, these models are then trained independently, and depending on the type of task---i.e. regression or classification---the average or majority of those predictions yield a more accurate estimate. This is commonly used to reduce variance within a noisy dataset. (Source: [IBM](https://www.ibm.com/topics/overfitting))
 
 ### Random forest
 
 CART decision trees are more prone to overfitting, and random forests can solve this problem to some extent. The main idea of random forest is to use randomness to generate a series of simple decision trees and combine their predictions into a final result.
 
-
-The RF classifier is an ensemble classifier that uses a set of CARTs to make a prediction ([Breiman, 2001](https://link.springer.com/article/10.1023/a:1010933404324)).The trees are created by drawing a subset of training samples through replacement (a bagging approach). This means that the same sample can be selected several times, while others may not be selected at all ([Belgiu, 2016](https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050)).
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0924271616000265-gr1.jpg"/ width=700><br/>
-(The random forest classifier.Source: [Belgiu, 2016](https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050))
-
+The RF classifier is an ensemble classifier that uses a set of CARTs to make a prediction ([Breiman, 2001](https://link.springer.com/article/10.1023/a:1010933404324)).The trees are created by drawing a subset of training samples through replacement (a bagging approach). This means that the same sample can be selected several times, while others may not be selected at all ([Belgiu, 2016](https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050)). <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0924271616000265-gr1.jpg" width="700"/><br/> (The random forest classifier.Source: [Belgiu, 2016](https://www.sciencedirect.com/science/article/pii/S0924271616000265#b0050))
 
 ### Support Vector Machine (SVM)
 
-- Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection. (SVM is one of the best classification algorithms.([Pal & Mather. 2006](https://www.tandfonline.com/doi/full/10.1080/01431160512331314083)))
+-   Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection. (SVM is one of the best classification algorithms.([Pal & Mather. 2006](https://www.tandfonline.com/doi/full/10.1080/01431160512331314083)))
 
-- Advantages:
+-   Advantages:
 
-  - Effective in high dimensional spaces.
+    -   Effective in high dimensional spaces.
 
-  - Still effective in cases where number of dimensions is greater than the number of samples.
+    -   Still effective in cases where number of dimensions is greater than the number of samples.
 
-  - Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.
+    -   Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.
 
-  - Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels.
+    -   Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels.
 
+-   Disadvantages:
 
-- Disadvantages:
+    -   If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial.
 
-  - If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial.
+    -   SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation (see Scores and probabilities, below).
 
-  - SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation (see Scores and probabilities, below).
-  
 (Source: [scikit-learn](https://scikit-learn.org/stable/modules/svm.html))
 
-
 ### The 3 main types of image classification techniques in remote sensing
-Unsupervised and supervised image classification are the two most common approaches.However, object-based classification has gained more popularity because it’s useful for high-resolution data.
 
-<img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classifiation-infographic.png"/ width=500><br/>
-(Source:[IMAGE CLASSIFICATION IN REMOTE SENSING. 2022](https://gisgeography.com/image-classification-techniques-remote-sensing/#remote-sensing-data-trends))
+Unsupervised and supervised image classification are the two most common approaches.However, object-based classification has gained more popularity because it's useful for high-resolution data.
 
+<img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classifiation-infographic.png" width="500"/><br/> (Source:[IMAGE CLASSIFICATION IN REMOTE SENSING. 2022](https://gisgeography.com/image-classification-techniques-remote-sensing/#remote-sensing-data-trends))
 
 ## Application
 
@@ -89,61 +80,47 @@ Unsupervised and supervised image classification are the two most common approac
 
 #### Random forest classifier
 
-- Land cover classifiction
+-   Land cover classifiction
 
-Based on the classifications of six Landsat TM and HJ-1A/B remotely sensed space-borne optical satellite image mosaics with a superior random forest decision tree ensemble classifier, a total increase in urban land of about 28,000 km2 could be detected alongside a simultaneous decrease in natural land cover classes and cropland. ([Haas & Ban, 2013](https://www.sciencedirect.com/science/article/pii/S0303243413001803)) 
+Based on the classifications of six Landsat TM and HJ-1A/B remotely sensed space-borne optical satellite image mosaics with a superior random forest decision tree ensemble classifier, a total increase in urban land of about 28,000 km2 could be detected alongside a simultaneous decrease in natural land cover classes and cropland. ([Haas & Ban, 2013](https://www.sciencedirect.com/science/article/pii/S0303243413001803))
 
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0303243413001803-gr5.jpg"/ width=500><br/>
-(Detailed excerpts from the classifications (right column) and their respective areas in FCC images in the left. The six rows show the following areas in descending order: Beijing 1990, Beijing 2010, Shanghai 1990, Shanghai 2010, Shenzhen 1990 and Shenzhen 2010.[Haas & Ban, 2013](https://www.sciencedirect.com/science/article/pii/S0303243413001803) )
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0303243413001803-gr5.jpg" width="500"/><br/> (Detailed excerpts from the classifications (right column) and their respective areas in FCC images in the left. The six rows show the following areas in descending order: Beijing 1990, Beijing 2010, Shanghai 1990, Shanghai 2010, Shenzhen 1990 and Shenzhen 2010.[Haas & Ban, 2013](https://www.sciencedirect.com/science/article/pii/S0303243413001803) )
 
-
-- Classify urban impervious surfaces
+-   Classify urban impervious surfaces
 
 Classify urban impervious surfaces from single-date MODIS data.([Deng and Wu, 2013](https://www.sciencedirect.com/science/article/pii/S0924271613002116))
-  
-- Map boreal forest habitats 
+
+-   Map boreal forest habitats
 
 Using WorldView-2 imagery to map boreal forest habitats.([Räsänen et al., 2013](https://www.tandfonline.com/doi/full/10.1080/01431161.2013.845318))
 
-- Map tree canopy cover and biomass 
+-   Map tree canopy cover and biomass
 
 Using uni-temporal and multi-temporal Landsat 8 imagery to map tree canopy cover and biomass.([Karlson et al., 2015](https://www.mdpi.com/2072-4292/7/8/10017))
 
 #### SVMs
 
-- Biophysical tasks
+-   Biophysical tasks
 
 SVMs have been used in remote sensing-based estimation and monitoring of biophysical parameters such as chlorophyll concentration, gross primary product, and evapotranspiration.([Kwiatkowska and Fargion (2003)](https://ieeexplore.ieee.org/document/1260622))
 
+-   Land cover land use tasks
 
-- Land cover land use tasks
-
-[Inglada (2007)](https://www.sciencedirect.com/science/article/pii/S092427160700055X)  implemented SVMs to classify man-made features (e.g., bridges, roads, roundabouts) from 2.5 m SPOT 5 imagery.
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S092427160700055X-gr2.jpg"/ width=700><br/>
-(An example of the kind of extraction which can be obtained.[Inglada (2007)](https://www.sciencedirect.com/science/article/pii/S092427160700055X) )
+[Inglada (2007)](https://www.sciencedirect.com/science/article/pii/S092427160700055X) implemented SVMs to classify man-made features (e.g., bridges, roads, roundabouts) from 2.5 m SPOT 5 imagery.<br/> 
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S092427160700055X-gr2.jpg" width="700"/><br/> (An example of the kind of extraction which can be obtained.[Inglada (2007)](https://www.sciencedirect.com/science/article/pii/S092427160700055X) )
 
 ### Unsupervised
 
-- Land cover classifiction
+-   Land cover classifiction
 
-[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf) obtain pairs of images from the same location at 
-different times, and then sample about 1 million Sentinel-2 image patches around the most 
-populated cities. They map images to multiple embedding sub-spaces, and for each sub-space we optimize a different contrastive loss that encourages a different set of invariances (e.g., to temporal or synthetic augmentations). After training, the shared backbone produces a common representation that captures the different factors of variation.
+[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf) obtain pairs of images from the same location at different times, and then sample about 1 million Sentinel-2 image patches around the most populated cities. They map images to multiple embedding sub-spaces, and for each sub-space we optimize a different contrastive loss that encourages a different set of invariances (e.g., to temporal or synthetic augmentations). After training, the shared backbone produces a common representation that captures the different factors of variation.
 
-<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco.png?raw=true"/ width=700><br/>
-(Seasonal Contrast (SeCo), Source:[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf))
+<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco.png?raw=true" width="700"/><br/> (Seasonal Contrast (SeCo), Source:[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf))
 
-
-Task: multi-label land-cover classification.<br/>
-Metric: mean average precision.<br/>
-<img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco2.png?raw=true"/ width=700><br/>
-(Land-cover classification on BigEarthNet, Source:[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf))
-
+Task: multi-label land-cover classification.<br/> Metric: mean average precision.<br/> <img src="https://github.com/Murphy829/RSETEST/blob/main/imgs/Seco2.png?raw=true" width="700"/><br/> (Land-cover classification on BigEarthNet, Source:[Mañas et al., 2021](https://www.servicenow.com/research/publication/oscarmanasseasiccv2021/poster.pdf))
 
 ## Reflection
 
 With the increasing spatial and temporal resolution of Earth observation by remote sensing satellite constellations, massive amounts of data are being generated every day, and machine learning has become the way to go in order to quickly obtain information and quantify data from these images.
 
-But the statistics and maths involved made it difficult for me to get to grips with it at short notice. Perhaps I should start with the classification tools integrated in Arcmap.
-<img src ="https://desktop.arcgis.com/en/arcmap/10.7/extensions/spatial-analyst/image-classification/GUID-2F126DFC-49A7-4C61-ADF5-C6BEEC5EDD7F-web.png"/ width=700><br/>
-[What is image classification. Source: ArcMap](https://desktop.arcgis.com/en/arcmap/latest/extensions/spatial-analyst/image-classification/what-is-image-classification-.htm)
+But the statistics and maths involved made it difficult for me to get to grips with it at short notice. Perhaps I should start with the classification tools integrated in Arcmap. <img src="https://desktop.arcgis.com/en/arcmap/10.7/extensions/spatial-analyst/image-classification/GUID-2F126DFC-49A7-4C61-ADF5-C6BEEC5EDD7F-web.png" width="700"/><br/> [What is image classification. Source: ArcMap](https://desktop.arcgis.com/en/arcmap/latest/extensions/spatial-analyst/image-classification/what-is-image-classification-.htm)
