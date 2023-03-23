@@ -171,7 +171,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">6.1</span>  Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">6.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#classification-and-regression-tree-cart" id="toc-classification-and-regression-tree-cart" class="nav-link" data-scroll-target="#classification-and-regression-tree-cart"><span class="toc-section-number">6.1.1</span>  Classification and regression tree (CART)</a></li>
+  <li><a href="#random-forest" id="toc-random-forest" class="nav-link" data-scroll-target="#random-forest"><span class="toc-section-number">6.1.2</span>  Random forest</a></li>
+  <li><a href="#support-vector-machine-svm" id="toc-support-vector-machine-svm" class="nav-link" data-scroll-target="#support-vector-machine-svm"><span class="toc-section-number">6.1.3</span>  Support Vector Machine (SVM)</a></li>
+  </ul></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="toc-section-number">6.2</span>  Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">6.3</span>  Reflection</a></li>
   </ul>
@@ -197,10 +202,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><a href="https://andrewmaclachlan.github.io/CASA0023-lecture-6/#1">🛡️Lecture link</a><br> <a href="https://andrewmaclachlan.github.io/CASA0023/6_classification_I.html">⚔️Practical link</a><br></p>
-<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/6%2BClassification%2BI.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
+<p><img src="https://raw.githubusercontent.com/Murphy829/RSETEST/e8159eefb13b5813b73719b604071c984881bf0e/imgs/mindmaps/6%2BClassification%2BI.svg" width="700"><br> A mindmap for this chapter, marking orange is the part that works best for me.</p>
 <section id="summary" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
-<p>This week</p>
+<p>“Image classification is the process of assigning land cover classes to pixels. For example, classes include water, urban, forest, agriculture, and grassland.”(<a href="https://gisgeography.com/image-classification-techniques-remote-sensing/">GISGeography. 2022</a>)</p>
+<p><img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classification-techniques-remote-sensing.jpg" width="700"><br></p>
+<p>Useful information extraction from EO data has long been a scientific challenge in remote sensing. Remote sensing image classification is one of the most fundamental problems in remote sensing data processing. With the increasing amount of remote sensing data at high spatial resolution, it is worthwhile to pay attention to and conduct research on how to integrate various information extraction techniques, integrate the results of multi-scale information extraction, and better extract quantitative information from various types of remote sensing data.</p>
+<section id="classification-and-regression-tree-cart" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="classification-and-regression-tree-cart"><span class="header-section-number">6.1.1</span> Classification and regression tree (CART)</h3>
+<ul>
+<li><p>Classification trees: classify data into two or more discrete (can only have certain values) categories</p></li>
+<li><p>Regression trees: predict continuous dependent variable</p></li>
+<li><p>Gini Impurity: Gini Impurity is a measurement used to build Decision Trees to determine how the features of a dataset should split nodes to form the tree. More precisely, the Gini Impurity of a dataset is a number between 0-0.5, which indicates the likelihood of new, random data being misclassified if it were given a random class label according to the class distribution in the dataset.(<a href="https://www.learndatasci.com/glossary/gini-impurity/">Fatih Karabiber</a>)</p></li>
+<li><p>Overfitting: Overfitting is a concept in data science, which occurs when a statistical model fits exactly against its training data. Low error rates and a high variance are good indicators of overfitting. In order to prevent this type of behavior, part of the training dataset is typically set aside as the “test set” to check for overfitting. If the training data has a low error rate and the test data has a high error rate, it signals overfitting.</p>
+<p>How to avoid overfitting ?</p>
+<ul>
+<li><p>Early stopping: As we mentioned earlier, this method seeks to pause training before the model starts learning the noise within the model. This approach risks halting the training process too soon, leading to the opposite problem of underfitting. Finding the “sweet spot” between underfitting and overfitting is the ultimate goal here.</p></li>
+<li><p>Train with more data: Expanding the training set to include more data can increase the accuracy of the model by providing more opportunities to parse out the dominant relationship among the input and output variables. That said, this is a more effective method when clean, relevant data is injected into the model. Otherwise, you could just continue to add more complexity to the model, causing it to overfit.</p></li>
+<li><p>Data augmentation: While it is better to inject clean, relevant data into your training data, sometimes noisy data is added to make a model more stable. However, this method should be done sparingly.</p></li>
+<li><p>Feature selection: When you build a model, you’ll have a number of parameters or features that are used to predict a given outcome, but many times, these features can be redundant to others. Feature selection is the process of identifying the most important ones within the training data and then eliminating the irrelevant or redundant ones. This is commonly mistaken for dimensionality reduction, but it is different. However, both methods help to simplify your model to establish the dominant trend in the data.</p></li>
+<li><p>Regularization: If overfitting occurs when a model is too complex, it makes sense for us to reduce the number of features. But what if we don’t know which inputs to eliminate during the feature selection process? If we don’t know which features to remove from our model, regularization methods can be particularly helpful. Regularization applies a “penalty” to the input parameters with the larger coefficients, which subsequently limits the amount of variance in the model. While there are a number of regularization methods, such as L1 regularization, Lasso regularization, and dropout, they all seek to identify and reduce the noise within the data.</p></li>
+<li><p>Ensemble methods: Ensemble learning methods are made up of a set of classifiers—e.g.&nbsp;decision trees—and their predictions are aggregated to identify the most popular result. The most well-known ensemble methods are bagging and boosting. In bagging, a random sample of data in a training set is selected with replacement—meaning that the individual data points can be chosen more than once. After several data samples are generated, these models are then trained independently, and depending on the type of task—i.e.&nbsp;regression or classification—the average or majority of those predictions yield a more accurate estimate. This is commonly used to reduce variance within a noisy dataset. (Source: <a href="https://www.ibm.com/topics/overfitting">IBM</a>)</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="random-forest" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="random-forest"><span class="header-section-number">6.1.2</span> Random forest</h3>
+<p>CART decision trees are more prone to overfitting, and random forests can solve this problem to some extent. The main idea of random forest is to use randomness to generate a series of simple decision trees and combine their predictions into a final result.</p>
+</section>
+<section id="support-vector-machine-svm" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="support-vector-machine-svm"><span class="header-section-number">6.1.3</span> Support Vector Machine (SVM)</h3>
+<ul>
+<li><p>Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection. (SVM is one of the best classification algorithms.(<a href="https://www.tandfonline.com/doi/full/10.1080/01431160512331314083">Pal &amp; Mather. 2006</a>))</p></li>
+<li><p>Advantages:</p>
+<ul>
+<li><p>Effective in high dimensional spaces.</p></li>
+<li><p>Still effective in cases where number of dimensions is greater than the number of samples.</p></li>
+<li><p>Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.</p></li>
+<li><p>Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels.</p></li>
+</ul></li>
+<li><p>Disadvantages:</p>
+<ul>
+<li><p>If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial.</p></li>
+<li><p>SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation (see Scores and probabilities, below).</p></li>
+</ul></li>
+</ul>
+<p>(Source: <a href="https://scikit-learn.org/stable/modules/svm.html">scikit-learn</a>)</p>
+</section>
 </section>
 <section id="application" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>

@@ -6,11 +6,72 @@ editor: visual
 
 [🛡️Lecture link](https://andrewmaclachlan.github.io/CASA0023-lecture-6/#1)<br/> [⚔️Practical link](https://andrewmaclachlan.github.io/CASA0023/6_classification_I.html)<br/>
 
-<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/cfad0da659f496bf719127057fe096a910dbfa5b/imgs/mindmaps/6%2BClassification%2BI.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
+<img src="https://raw.githubusercontent.com/Murphy829/RSETEST/e8159eefb13b5813b73719b604071c984881bf0e/imgs/mindmaps/6%2BClassification%2BI.svg" width="700"/><br/> A mindmap for this chapter, marking orange is the part that works best for me.
 
 ## Summary
 
-This week
+“Image classification is the process of assigning land cover classes to pixels. For example, classes include water, urban, forest, agriculture, and grassland.”([GISGeography. 2022](https://gisgeography.com/image-classification-techniques-remote-sensing/))
+
+<img src="https://gisgeography.com/wp-content/uploads/2014/07/image-classification-techniques-remote-sensing.jpg" / width =700><br/>
+
+Useful information extraction from EO data has long been a scientific challenge in remote sensing. Remote sensing image classification is one of the most fundamental problems in remote sensing data processing. With the increasing amount of remote sensing data at high spatial resolution, it is worthwhile to pay attention to and conduct research on how to integrate various information extraction techniques, integrate the results of multi-scale information extraction, and better extract quantitative information from various types of remote sensing data.
+
+
+### Classification and regression tree (CART)
+
+- Classification trees: classify data into two or more discrete (can only have certain values) categories
+
+- Regression trees: predict continuous dependent variable
+
+- Gini Impurity: Gini Impurity is a measurement used to build Decision Trees to determine how the features of a dataset should split nodes to form the tree. More precisely, the Gini Impurity of a dataset is a number between 0-0.5, which indicates the likelihood of new, random data being misclassified if it were given a random class label according to the class distribution in the dataset.([Fatih Karabiber](https://www.learndatasci.com/glossary/gini-impurity/))
+
+- Overfitting: Overfitting is a concept in data science, which occurs when a statistical model fits exactly against its training data. Low error rates and a high variance are good indicators of overfitting. In order to prevent this type of behavior, part of the training dataset is typically set aside as the “test set” to check for overfitting. If the training data has a low error rate and the test data has a high error rate, it signals overfitting.
+
+  How to avoid overfitting ?
+  - Early stopping: As we mentioned earlier, this method seeks to pause training before the model starts learning the noise within the model. This approach risks halting the training process too soon, leading to the opposite problem of underfitting. Finding the “sweet spot” between underfitting and overfitting is the ultimate goal here.
+  
+  - Train with more data: Expanding the training set to include more data can increase the accuracy of the model by providing more opportunities to parse out the dominant relationship among the input and output variables. That said, this is a more effective method when clean, relevant data is injected into the model. Otherwise, you could just continue to add more complexity to the model, causing it to overfit.
+  
+  - Data augmentation: While it is better to inject clean, relevant data into your training data, sometimes noisy data is added to make a model more stable. However, this method should be done sparingly.
+  
+  - Feature selection: When you build a model, you’ll have a number of parameters or features that are used to predict a given outcome, but many times, these features can be redundant to others. Feature selection is the process of identifying the most important ones within the training data and then eliminating the irrelevant or redundant ones. This is commonly mistaken for dimensionality reduction, but it is different.  However, both methods help to simplify your model to establish the dominant trend in the data.
+  
+  - Regularization: If overfitting occurs when a model is too complex, it makes sense for us to reduce the number of features. But what if we don’t know which inputs to eliminate during the feature selection process? If we don’t know which features to remove from our model, regularization methods can be particularly helpful. Regularization applies a “penalty” to the input parameters with the larger coefficients, which subsequently limits the amount of variance in the model.  While there are a number of regularization methods, such as L1 regularization, Lasso regularization, and dropout, they all seek to identify and reduce the noise within the data.
+  
+  - Ensemble methods: Ensemble learning methods are made up of a set of classifiers—e.g. decision trees—and their predictions are aggregated to identify the most popular result. The most well-known ensemble methods are bagging and boosting. In bagging, a random sample of data in a training set is selected with replacement—meaning that the individual data points can be chosen more than once. After several data samples are generated, these models are then trained independently, and depending on the type of task—i.e. regression or classification—the average or majority of those predictions yield a more accurate estimate. This is commonly used to reduce variance within a noisy dataset.
+(Source: [IBM](https://www.ibm.com/topics/overfitting))
+
+
+### Random forest
+
+CART decision trees are more prone to overfitting, and random forests can solve this problem to some extent. The main idea of random forest is to use randomness to generate a series of simple decision trees and combine their predictions into a final result.
+
+### Support Vector Machine (SVM)
+
+- Support vector machines (SVMs) are a set of supervised learning methods used for classification, regression and outliers detection. (SVM is one of the best classification algorithms.([Pal & Mather. 2006](https://www.tandfonline.com/doi/full/10.1080/01431160512331314083)))
+
+- Advantages:
+
+  - Effective in high dimensional spaces.
+
+  - Still effective in cases where number of dimensions is greater than the number of samples.
+
+  - Uses a subset of training points in the decision function (called support vectors), so it is also memory efficient.
+
+  - Versatile: different Kernel functions can be specified for the decision function. Common kernels are provided, but it is also possible to specify custom kernels.
+
+
+- Disadvantages:
+
+  - If the number of features is much greater than the number of samples, avoid over-fitting in choosing Kernel functions and regularization term is crucial.
+
+  - SVMs do not directly provide probability estimates, these are calculated using an expensive five-fold cross-validation (see Scores and probabilities, below).
+  
+(Source: [scikit-learn](https://scikit-learn.org/stable/modules/svm.html))
+
+
+
+
 
 ## Application
 
