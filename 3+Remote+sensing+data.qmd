@@ -42,20 +42,19 @@ It is usually necessary to pre-process the remotely sensed data and remove the g
 
     -   Coordinate transformation: Transformation of spatial position (image element coordinates)
         -   Take the coordinates and model them to give geometric transformation coefficients
-        -   Plot these and try to minimise the RMSE - Jensen sets a RMSE value of 0.5 
-        <img src="https://www.researchgate.net/profile/Abdul-Basith-5/publication/320710942/figure/fig7/AS:555107663659009@1509359388657/Geometric-correction-procedures.png"/ width="700"/><br/> (Source: [Abdul Basith](https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942))
+        -   Plot these and try to minimise the RMSE - Jensen sets a RMSE value of 0.5 <img src="https://www.researchgate.net/profile/Abdul-Basith-5/publication/320710942/figure/fig7/AS:555107663659009@1509359388657/Geometric-correction-procedures.png" width="600"/><br/> (Source: [Abdul Basith](https://www.researchgate.net/figure/Geometric-correction-procedures_fig7_320710942))
     -   Resample: recalculation of pixel grayscale values
         -   Nearest Neighbor
         -   Linear
         -   Cubic
-        -   Cubic spline
-        <img src="https://www.researchgate.net/profile/Peter-Bobrowsky/publication/253213007/figure/fig48/AS:559223604826117@1510340705264/Resampling-methods.png" /width=700/><br/> (Source: [Peter T. Bobrowsky](https://www.researchgate.net/figure/Resampling-methods_fig48_253213007))
+        -   Cubic spline <br/>
+        <img src="https://www.researchgate.net/profile/Peter-Bobrowsky/publication/253213007/figure/fig48/AS:559223604826117@1510340705264/Resampling-methods.png" width="600/"/><br/> (Source: [Peter T. Bobrowsky](https://www.researchgate.net/figure/Resampling-methods_fig48_253213007))
 
 #### Atmospheric correction
 
 Atmospheric correction is a kind of Radiometric correction. The objective of atmospheric correction is to determine true surface reflectance values by removing atmospheric effects from satellite images ([Themistocleous et al., 2008](https://www.researchgate.net/profile/Kyriacos-Themistocleous/publication/257067491_The_importance_of_considering_atmospheric_correction_in_the_pre-processing_of_satellite_remote_sensing_data_intended_for_the_management_and_detection_of_cultural_sites_a_case_study_of_the_Cyprus_area/links/57ffcf0108ae6fc7fc6523f0/The-importance-of-considering-atmospheric-correction-in-the-pre-processing-of-satellite-remote-sensing-data-intended-for-the-management-and-detection-of-cultural-sites-a-case-study-of-the-Cyprus-area.pdf)).
 
-<img src="https://hls.gsfc.nasa.gov/wp-content/uploads/2018/10/AC_LaSRC_example.jpg.jpeg" / width="700"/><br/> (Example of Atmospheric correction. Source: [NASA](https://hls.gsfc.nasa.gov/algorithms/atmospheric-correction/))
+<img src="https://hls.gsfc.nasa.gov/wp-content/uploads/2018/10/AC_LaSRC_example.jpg.jpeg" width="700"/><br/> (Example of Atmospheric correction. Source: [NASA](https://hls.gsfc.nasa.gov/algorithms/atmospheric-correction/))
 
 -   Causes of environmental attenuation
 
@@ -125,67 +124,50 @@ Radiometric Calibration refers to the ability to convert the digital numbers rec
 
 This is termed "Mosaicking" in remote sensing - but it's not much different to merging in GIS.<br/>
 
-Here is an example of a Landsat 8 band 753 colour-composite without seamless mosaicing:
-<img src="https://i.stack.imgur.com/pz969.jpg"/ width=700><br/>
-And here is the same image with the use of the Mosaic With Feathering tool:
-<img src="https://i.stack.imgur.com/40TCX.jpg"/ width=700><br/>
-(Example of a Landsat 8 band 753 colour-composite without seamless mosaicking. Source:
-[WhiteboxDev]( https://gis.stackexchange.com/questions/127310/how-to-create-a-mosaic-in-qgis-with-cutline-and-feathering-for-landsat-8-imagery))
+Here is an example of a Landsat 8 band 753 colour-composite without seamless mosaicing: <img src="https://i.stack.imgur.com/pz969.jpg" width="700"/><br/> And here is the same image with the use of the Mosaic With Feathering tool: <img src="https://i.stack.imgur.com/40TCX.jpg" width="700"/><br/> (Example of a Landsat 8 band 753 colour-composite without seamless mosaicking. Source: [WhiteboxDev](https://gis.stackexchange.com/questions/127310/how-to-create-a-mosaic-in-qgis-with-cutline-and-feathering-for-landsat-8-imagery))
 
 #### Enhancements
+
 In terms of the object of action, contrast enhancement corresponds mainly to the image element, while filter enhancement takes into account the relationship between the image element and its neighbour elements.
 
-- Contrast Enhancement
-Image enhancement is the procedure of improving the quality and the information content of original data before processing.( [Haldar, 2018](https://www.sciencedirect.com/science/article/pii/B9780124160057000064))
-<img src="https://www.earthdatascience.org/images/earth-analytics/raster-data/raster-image-stretch-dark.jpg"/ width=700/><br/>
-（Example of contrast stretch, Source:[Earth Lab]( https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/intro-naip/)）
+-   Contrast Enhancement Image enhancement is the procedure of improving the quality and the information content of original data before processing.( [Haldar, 2018](https://www.sciencedirect.com/science/article/pii/B9780124160057000064)) <img src="https://www.earthdatascience.org/images/earth-analytics/raster-data/raster-image-stretch-dark.jpg" width="700/"/><br/> （Example of contrast stretch, Source:[Earth Lab](https://www.earthdatascience.org/courses/use-data-open-source-python/multispectral-remote-sensing/intro-naip/)）
 
-- Ratio
-Normalized Burn Ratio (NBR) is used to identify burned areas and provide a measure of burn severity. It is calculated as a ratio between the NIR and SWIR values in traditional fashion. <br/>
+-   Ratio Normalized Burn Ratio (NBR) is used to identify burned areas and provide a measure of burn severity. It is calculated as a ratio between the NIR and SWIR values in traditional fashion. <br/>
 
-<img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/SR-NBR.JPG?itok=j-oHX3TI"/ width=700/><br/>
+<img src="https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/styles/full_width/public/thumbnails/image/SR-NBR.JPG?itok=j-oHX3TI" width="700/"/><br/>
 
-(Example of Normalized Burn Ratio. Source: [USGS]( https://www.usgs.gov/landsat-missions/landsat-normalized-burn-ratio))
+(Example of Normalized Burn Ratio. Source: [USGS](https://www.usgs.gov/landsat-missions/landsat-normalized-burn-ratio))
 
-- Filtering
-Low pass or low frequency (averages the surrounding pixels), High pass or high frequency - enhance local variations.
+-   Filtering Low pass or low frequency (averages the surrounding pixels), High pass or high frequency - enhance local variations.
 
-- PCA
-To retain key information, reduce data volume and enhance or extract useful information through function transformation.
-- Principal Component
-- Transform multi-spectral data into uncorrelated and smaller dataset
-- Has most of the original information
-- Reduces future computation "dimensionatliy reduction"
-- The first component will capture most of the variance within the dataset
-- In R this is from the RStoolbox packager asterPCA()
+-   PCA To retain key information, reduce data volume and enhance or extract useful information through function transformation.
 
+-   Principal Component
 
+-   Transform multi-spectral data into uncorrelated and smaller dataset
 
-- Texture
-Texture: spatial variation of gray values.
+-   Has most of the original information
 
-- Fusion
-Image fusion is where data from multiple sensors / sources is fused together.
+-   Reduces future computation "dimensionatliy reduction"
 
+-   The first component will capture most of the variance within the dataset
 
+-   In R this is from the RStoolbox packager asterPCA()
+
+-   Texture Texture: spatial variation of gray values.
+
+-   Fusion Image fusion is where data from multiple sensors / sources is fused together.
 
 ## Application
 
-- Agricultural monitoring
-For agricultural applications, in which several vegetation indices are applied for monitoring purposes, multi-temporal images are used. The integration of vegetation indices from remotely sensed images with other hydro-meteorological data is widely used for monitoring natural hazards such as droughts.( [Hadjimitsis et al., 2010]( https://nhess.copernicus.org/articles/10/89/2010/))
+-   Agricultural monitoring For agricultural applications, in which several vegetation indices are applied for monitoring purposes, multi-temporal images are used. The integration of vegetation indices from remotely sensed images with other hydro-meteorological data is widely used for monitoring natural hazards such as droughts.( [Hadjimitsis et al., 2010](https://nhess.copernicus.org/articles/10/89/2010/))
 
-
-- Shoreline Extraction
-Coastline is one of the most important linear features on the earth’s surface, which display a dynamic nature. Coastal zone, and its environmental management requires the information about coastlines and their changes. This paper examines the current methods of coastline change detection using satellite images. Based on the advantages and drawbacks of the methods, a new procedure has been developed.（[Alesheikh et al., 2007]( https://link.springer.com/article/10.1007/BF03325962)）
-
+-   Shoreline Extraction Coastline is one of the most important linear features on the earth's surface, which display a dynamic nature. Coastal zone, and its environmental management requires the information about coastlines and their changes. This paper examines the current methods of coastline change detection using satellite images. Based on the advantages and drawbacks of the methods, a new procedure has been developed.（[Alesheikh et al., 2007](https://link.springer.com/article/10.1007/BF03325962)）
 
 ## Reflection
 
 This week's course was very technical and fundamental to the processing of remote sensing data, involving a lot of terminology and knowledge of physics and mathematics.
 
-In China, the use of high-resolution remote sensing imagery and POI data to enhance the accuracy of the status quo survey has emerged in the task of spatial planning of land. In urban areas, combining remote sensing data with POI data can well compensate for the slow update rate of remote sensing image data and the lack of type attribute information.
-([Ming et al.,2020 ]( https://www.mdpi.com/2072-4292/12/7/1088))
+In China, the use of high-resolution remote sensing imagery and POI data to enhance the accuracy of the status quo survey has emerged in the task of spatial planning of land. In urban areas, combining remote sensing data with POI data can well compensate for the slow update rate of remote sensing image data and the lack of type attribute information. ([Ming et al.,2020](https://www.mdpi.com/2072-4292/12/7/1088))
 
-<img src="https://www.mdpi.com/remotesensing/remotesensing-12-01088/article_deploy/html/images/remotesensing-12-01088-g021-550.jpg"/ width=700/><br/>
-(The demonstration of Random Forest (RF) and AlexNet classification results. Source:([Ming et al.,2020 ]( https://www.mdpi.com/2072-4292/12/7/1088)))
-
+<img src="https://www.mdpi.com/remotesensing/remotesensing-12-01088/article_deploy/html/images/remotesensing-12-01088-g021-550.jpg" width="700/"/><br/> (The demonstration of Random Forest (RF) and AlexNet classification results. Source:([Ming et al.,2020](https://www.mdpi.com/2072-4292/12/7/1088)))
