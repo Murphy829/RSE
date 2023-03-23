@@ -20,7 +20,7 @@ book:
     - 8+Temperature+and+policy.qmd
     - 9+Synthetic+Aperture+Radar+(SAR)+data.qmd
     - summary.qmd
-    - references.qmd
+    #- references.qmd
   
   sidebar:
     background: "#D9E3E4"
